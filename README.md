@@ -1,65 +1,98 @@
-# 挑番 · Tiaofan
+# Tiaofan · 挑番
 
-**中文 · English · 日本語的动画发现界面。**
+**Find your next anime, understand the sources, and keep your watchlist close.**
 
-挑番把分季浏览、评分来源、作品详情、系列关系和追番交互放在同一个界面。本仓库是从线上产品整理出的独立源码示例，使用合成目录与中性占位图，适合学习、二次开发与自部署。
+A multilingual anime discovery experience in English, Chinese and Japanese, with seasonal browsing, source-aware title details and a responsive reading interface.
 
-[English](README.en.md) · [线上产品](https://anime.hubeiqiao.com) · [数据与素材边界](docs/DATA_SOURCES.md) · [安全说明](SECURITY.md)
+[Live website](https://anime.hubeiqiao.com/en) · [中文说明](README.zh-CN.md) · [Quick start](#quick-start) · [Documentation](#documentation)
 
-> 源码已公开供审阅，项目代码许可证仍等待所有者确认，当前未授予通用开源许可。第三方软件继续适用其原有许可证。详见 [LICENSE-STATUS.md](LICENSE-STATUS.md)。
+## Built with GPT Sites
 
-已通过 123 项测试、类型检查与构建。仍有已披露的 lint 清理项和两个开发工具安全公告，详见 [检查结果](docs/RELEASE_REVIEW.md)。
+**The entire website was built with GPT Sites through iterative prompting, implementation, and testing.** Product design, interface development and successive refinements were developed in that workflow. This was an iterative build, not a claim that a complete production product appeared from a single prompt.
 
-## 有什么
+This repository makes a sanitized source edition available for review and further development. It is an independently created project, not an official OpenAI product or endorsement. [How it was built →](docs/BUILT_WITH_GPT_SITES.md)
 
-- 中文、英文与日文界面及独立语言路由
-- 动画目录、筛选排序、卡片/列表视图与作品详情
-- 移动端适配、浅色/深色主题及无障碍降级
-- 可复用的来源证据、系列关系与观看状态组件
-- 公开查询与 MCP 接口的源码结构
-- 数据适配器和测试，便于替换成你有权使用的数据
+## Explore the product
 
-## 示例与线上站点的区别
+- **Seasonal discovery:** browse current and previous seasons, filter titles and switch between compact and visual catalog layouts.
+- **Three languages:** English, Chinese and Japanese interfaces, with language-specific routes and metadata.
+- **Source-aware details:** distinguish ratings, dates, synopsis material and viewing evidence rather than presenting missing data as verified facts.
+- **Reading on any screen:** responsive layouts, light/dark appearance and accessibility fallbacks.
+- **Watchlist interactions:** viewing state, favorites and recommendation flows in the hosted product; reusable interface and domain logic in the source edition.
+- **AI-readable structure:** public API and MCP code for structured catalog access.
 
-本仓库不是生产站点的数据备份。所有示例作品、目录与日期均为合成测试材料，不能当作真实推荐或播放信息。生产海报、评论摘录、观看记录、个人头像、角色衍生宣传图及运行配置没有打包。
+## What is in this repository?
 
-生产站点的登录由托管平台提供。本示例默认关闭登录、私人片单写入及 AI 服务，不信任请求方传入的身份头。接入你自己的认证、数据库或模型之前，请阅读 [部署说明](docs/DEPLOYMENT.md)。
+The source edition includes the interface, domain logic, schemas, adapters and regression tests. It runs with **six clearly marked fictional titles and neutral local SVG artwork**. Ratings, reviews and playback evidence are empty in the demo.
 
-## 本地运行
+Production datasets, private watchlists, personal images, credentials and runtime configuration are not included. The hosted product's authentication and connector services are platform capabilities; the standalone demo deliberately disables sign-in, private persistence and AI calls until an operator supplies a reviewed integration.
 
-建议 Node.js 24 与 npm（本次验证为 Node.js 24.19.0）；包声明的最低版本为 22.13，未单独验证所有旧版本。保留 package-lock.json。
+See [data and asset boundaries](docs/DATA_SOURCES.md) and the [deployment guide](docs/DEPLOYMENT.md) before connecting real services.
+
+## Quick start
+
+Use Node.js 24 and npm. Local validation used Node.js 24.19.0; the manifest minimum is 22.13, but older versions were not separately tested.
 
 ```sh
+git clone https://github.com/hubeiqiao/tiaofan.git
+cd tiaofan
 npm ci
 npm run dev
 ```
 
-按终端提示打开本地地址。首次启动会准备所需的合成运行时数据；不需要生产 API key、Cloudflare 登录或原站点账户。
+Open the local address printed by the server, normally http://127.0.0.1:5173. The demo needs no production API key, Cloudflare account or original-site login.
 
 ```sh
 npm run typecheck
 npm test
 npm run build
+npm start
 ```
 
-测试命令与范围以 package.json 为准。发布时实际执行的检查记录见 [发布清单](docs/RELEASE_CHECKLIST.md)。本地开发与构建成功不代表已经配置好生产登录或数据授权。
+To check a running development server:
 
-## 目录
+```sh
+npm run test:smoke -- http://127.0.0.1:5173
+```
 
-- app/：页面与服务端路由
-- components/、hooks/：交互界面和状态逻辑
-- lib/：领域逻辑、数据转换与来源适配器
-- data/：合成演示数据与界面翻译
-- scripts/：数据准备、验证和维护脚本
-- tests/：可复用回归测试
-- public/：可分发的占位图及保留的许可证文件
+The default canonical origin is example.invalid. Set your own origin in lib/site-brand.ts before deployment. Environment and production-integration guidance is in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
-## 数据、图片和许可
+## Architecture
 
-代码许可与数据许可是两回事。Bangumi wiki 元数据、bangumi-data、Wikidata、Kitsu、Jikan/MAL、IMDb，以及作品海报和用户评论，各自有独立的使用条件。公开可读的 API 也不等于允许重新分发全部内容。
+- **Interface:** React, TypeScript, responsive CSS and reusable UI components
+- **Application runtime:** Vinext, Vite and Cloudflare Workers tooling
+- **Domain layer:** catalog normalization, source evidence, relationships, navigation and viewing-state logic
+- **Data layer:** synthetic local snapshots by default, with source adapters retained as implementation references
+- **Private features:** isolated behind a disabled-by-default identity boundary; database schema and migration source are available for integration work
 
-本仓库不授予动画角色、海报、商标、评论、生产数据或第三方服务的权利。依赖及保留的第三方源码说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。自行接入数据时保留出处、日期、许可、修改记录，并遵守访问频率限制。不要把私有片单、凭据或账号标识提交到 Git。
+```text
+app/           Pages and HTTP/MCP routes
+components/    Reusable product and UI components
+hooks/         Client interaction state
+lib/           Domain logic and source adapters
+data/          Synthetic fixtures and UI translations
+scripts/       Preparation, safety and verification tooling
+tests/         Regression tests
+docs/          Setup, provenance and release review
+```
 
-## 参与
+## Validation and project status
 
-欢迎报告问题和提出改进建议。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。安全问题请按 [SECURITY.md](SECURITY.md) 私下报告，不要在公开 issue 中粘贴凭据或私人数据。
+Local validation passed **123 automated tests**, type checking, production build/CSS checks and 14 HTTP checks each against development and built local servers. These are recorded local results, not an assertion that GitHub CI has passed.
+
+The project retains a disclosed lint backlog and two development-tool advisory roots. CI applies a narrow full-dependency advisory policy rather than silently ignoring new high/critical findings. Details and machine-readable results are in the [release review](docs/RELEASE_REVIEW.md).
+
+**Code license selection is pending.** Public visibility does not itself grant a general open-source license. Third-party code, data, artwork and trademarks retain their own terms. See [LICENSE-STATUS.md](LICENSE-STATUS.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Documentation
+
+- [Built with GPT Sites](docs/BUILT_WITH_GPT_SITES.md)
+- [Development and deployment](docs/DEPLOYMENT.md)
+- [Data sources and content rights](docs/DATA_SOURCES.md)
+- [Release review and validation limits](docs/RELEASE_REVIEW.md)
+- [Dependency remediation](docs/DEPENDENCY_REVIEW.md)
+- [Repository setup](docs/REPOSITORY_SETUP.md)
+- [Security policy](SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+
+Created by [hubeiqiao](https://github.com/hubeiqiao).
