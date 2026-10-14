@@ -1,0 +1,756 @@
+{
+  "scope": "ESLint diagnostics for prepared source; paths relative to source root. Inherited findings remain visible.",
+  "errors": 263,
+  "warnings": 72,
+  "fileCountWithDiagnostics": 58,
+  "rules": {
+    "@next/next/no-assign-module-variable": {
+      "errors": 2,
+      "warnings": 0
+    },
+    "@next/next/no-img-element": {
+      "errors": 0,
+      "warnings": 4
+    },
+    "@typescript-eslint/no-explicit-any": {
+      "errors": 159,
+      "warnings": 0
+    },
+    "@typescript-eslint/no-require-imports": {
+      "errors": 3,
+      "warnings": 0
+    },
+    "@typescript-eslint/no-unused-vars": {
+      "errors": 0,
+      "warnings": 46
+    },
+    "prefer-const": {
+      "errors": 1,
+      "warnings": 0
+    },
+    "react-hooks/exhaustive-deps": {
+      "errors": 0,
+      "warnings": 22
+    },
+    "react-hooks/preserve-manual-memoization": {
+      "errors": 1,
+      "warnings": 0
+    },
+    "react-hooks/refs": {
+      "errors": 79,
+      "warnings": 0
+    },
+    "react-hooks/set-state-in-effect": {
+      "errors": 18,
+      "warnings": 0
+    }
+  },
+  "files": [
+    {
+      "path": "app/api/catalog/route.ts",
+      "errors": 0,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "app/api/historical-catalog/route.ts",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 2,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "app/api/kitsu/route.ts",
+      "errors": 7,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 7,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "app/api/subjects/route.ts",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "app/api/watchlist/route.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "app/chatgpt-auth.ts",
+      "errors": 0,
+      "warnings": 3,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 3
+        }
+      }
+    },
+    {
+      "path": "app/en/season/[year]/[season]/page.tsx",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "app/not-found.tsx",
+      "errors": 0,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "app/season/[year]/[season]/page.tsx",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "components/anime-home.tsx",
+      "errors": 67,
+      "warnings": 47,
+      "rules": {
+        "@next/next/no-img-element": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 27,
+          "warnings": 0
+        },
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 28
+        },
+        "prefer-const": {
+          "errors": 1,
+          "warnings": 0
+        },
+        "react-hooks/exhaustive-deps": {
+          "errors": 0,
+          "warnings": 18
+        },
+        "react-hooks/preserve-manual-memoization": {
+          "errors": 1,
+          "warnings": 0
+        },
+        "react-hooks/refs": {
+          "errors": 26,
+          "warnings": 0
+        },
+        "react-hooks/set-state-in-effect": {
+          "errors": 12,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "components/anime-poster.tsx",
+      "errors": 0,
+      "warnings": 2,
+      "rules": {
+        "@next/next/no-img-element": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "components/collection-share.tsx",
+      "errors": 9,
+      "warnings": 1,
+      "rules": {
+        "@next/next/no-img-element": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "react-hooks/refs": {
+          "errors": 9,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "components/gallery-chrome.tsx",
+      "errors": 1,
+      "warnings": 1,
+      "rules": {
+        "react-hooks/exhaustive-deps": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "react-hooks/refs": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "components/historical-registry.tsx",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 3,
+          "warnings": 0
+        },
+        "react-hooks/set-state-in-effect": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "components/mobile-settings.tsx",
+      "errors": 0,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "components/site-mark.tsx",
+      "errors": 0,
+      "warnings": 1,
+      "rules": {
+        "@next/next/no-img-element": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "components/swipe-deck.tsx",
+      "errors": 38,
+      "warnings": 0,
+      "rules": {
+        "react-hooks/refs": {
+          "errors": 36,
+          "warnings": 0
+        },
+        "react-hooks/set-state-in-effect": {
+          "errors": 2,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "components/theme-controls.tsx",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "react-hooks/set-state-in-effect": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "hooks/use-catalog-layout.ts",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "react-hooks/refs": {
+          "errors": 1,
+          "warnings": 0
+        },
+        "react-hooks/set-state-in-effect": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "hooks/use-historical-catalog.ts",
+      "errors": 4,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 4,
+          "warnings": 0
+        },
+        "react-hooks/exhaustive-deps": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "hooks/use-ranking-catalog.ts",
+      "errors": 3,
+      "warnings": 1,
+      "rules": {
+        "react-hooks/exhaustive-deps": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "react-hooks/refs": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "hooks/use-reader-history.ts",
+      "errors": 1,
+      "warnings": 1,
+      "rules": {
+        "react-hooks/exhaustive-deps": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "react-hooks/refs": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "hooks/use-reader-swipe.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "react-hooks/refs": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "hooks/use-recommendation-destination.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "react-hooks/refs": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/catalog-source.ts",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 2,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/catalog-subject.ts",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/discussion-diagnostics.ts",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 2,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/entry-order-evidence.ts",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 2,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/historical-document.ts",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/historical-registry-content.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/historical-registry-shards.ts",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 4,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/historical-registry.d.mts",
+      "errors": 12,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 12,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/home-seed.ts",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/i18n.tsx",
+      "errors": 1,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        },
+        "react-hooks/set-state-in-effect": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/jikan-cache.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/kitsu-rank-snapshot.ts",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 2,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/kitsu-source.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/library-presentation.ts",
+      "errors": 0,
+      "warnings": 2,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 2
+        }
+      }
+    },
+    {
+      "path": "lib/mcp-data.ts",
+      "errors": 20,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 20,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/metadata-link-provenance.ts",
+      "errors": 5,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 5,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/metadata-response.ts",
+      "errors": 13,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 13,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/personal-recommendations.ts",
+      "errors": 0,
+      "warnings": 2,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 2
+        }
+      }
+    },
+    {
+      "path": "lib/poster-image.ts",
+      "errors": 0,
+      "warnings": 2,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 2
+        }
+      }
+    },
+    {
+      "path": "lib/public-content.ts",
+      "errors": 6,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 6,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/ranking-catalog.d.mts",
+      "errors": 6,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 6,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/ranking-page-enrichment.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/ranking-response.d.mts",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/reader-history.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/recommendation-series.ts",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 4,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/refresh.ts",
+      "errors": 13,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 13,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/site-brand.ts",
+      "errors": 0,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "lib/snapshots.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "lib/watch-listings.ts",
+      "errors": 0,
+      "warnings": 2,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 2
+        }
+      }
+    },
+    {
+      "path": "scripts/prepare-historical-registry.mjs",
+      "errors": 0,
+      "warnings": 1,
+      "rules": {
+        "@typescript-eslint/no-unused-vars": {
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    {
+      "path": "scripts/verify-compiled-css.cjs",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-require-imports": {
+          "errors": 3,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "tests/ranking-response.test.mjs",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@next/next/no-assign-module-variable": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "tests/reader-history.test.mjs",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@next/next/no-assign-module-variable": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    },
+    {
+      "path": "types/data-json.d.ts",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "@typescript-eslint/no-explicit-any": {
+          "errors": 1,
+          "warnings": 0
+        }
+      }
+    }
+  ]
+}

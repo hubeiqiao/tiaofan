@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "revision": "synthetic-demo-v1-2026-10-01",
+  "generatedAt": "2026-10-01T00:00:00.000Z",
+  "synthetic": true,
+  "sources": {
+    "demo": {
+      "name": "Original synthetic demo fixtures",
+      "url": "https://example.invalid/demo-data",
+      "at": "2026-10-01T00:00:00.000Z",
+      "license": "UNLICENSED",
+      "attribution": "Fictional examples authored for this source demo; not third-party catalog data."
+    }
+  },
+  "items": [
+    {
+      "bgm": 900000001,
+      "key": "bgm:900000001",
+      "title": "示例：纸飞机观测站",
+      "originalTitle": "デモ：紙飛行機観測所",
+      "aliases": [],
+      "date": "2026-10-01",
+      "format": "TV",
+      "sourceFormat": "TV",
+      "dateSource": "demo",
+      "sourceKey": "demo",
+      "sourceAt": "2026-10-01T00:00:00.000Z",
+      "archiveEligible": false,
+      "details": {
+        "summary": "这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。",
+        "image": "/demo-poster.svg",
+        "tags": [
+          "日常",
+          "科幻"
+        ],
+        "episodes": 12,
+        "ratings": {},
+        "sourceKey": "demo",
+        "sourceAt": "2026-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bgm": 900000002,
+      "key": "bgm:900000002",
+      "title": "示例：月光修理部",
+      "originalTitle": "デモ：月あかり工房",
+      "aliases": [],
+      "date": "2026-10-01",
+      "format": "TV",
+      "sourceFormat": "TV",
+      "dateSource": "demo",
+      "sourceKey": "demo",
+      "sourceAt": "2026-10-01T00:00:00.000Z",
+      "archiveEligible": false,
+      "details": {
+        "summary": "这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。",
+        "image": "/demo-poster.svg",
+        "tags": [
+          "奇幻",
+          "治愈"
+        ],
+        "episodes": 12,
+        "ratings": {},
+        "sourceKey": "demo",
+        "sourceAt": "2026-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bgm": 900000003,
+      "key": "bgm:900000003",
+      "title": "示例：没有地图的星期天",
+      "originalTitle": "デモ：地図のない日曜日",
+      "aliases": [],
+      "date": "2026-10-01",
+      "format": "TV",
+      "sourceFormat": "TV",
+      "dateSource": "demo",
+      "sourceKey": "demo",
+      "sourceAt": "2026-10-01T00:00:00.000Z",
+      "archiveEligible": false,
+      "details": {
+        "summary": "这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。",
+        "image": "/demo-poster.svg",
+        "tags": [
+          "冒险",
+          "喜剧"
+        ],
+        "episodes": 12,
+        "ratings": {},
+        "sourceKey": "demo",
+        "sourceAt": "2026-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bgm": 900000004,
+      "key": "bgm:900000004",
+      "title": "示例：玻璃花园短篇",
+      "originalTitle": "デモ：ガラスの庭の短編",
+      "aliases": [],
+      "date": "2026-10-01",
+      "format": "movie",
+      "sourceFormat": "movie",
+      "dateSource": "demo",
+      "sourceKey": "demo",
+      "sourceAt": "2026-10-01T00:00:00.000Z",
+      "archiveEligible": false,
+      "details": {
+        "summary": "这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。",
+        "image": "/demo-poster.svg",
+        "tags": [
+          "日常"
+        ],
+        "episodes": 1,
+        "ratings": {},
+        "sourceKey": "demo",
+        "sourceAt": "2026-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bgm": 900000005,
+      "key": "bgm:900000005",
+      "title": "示例：邮差与星河",
+      "originalTitle": "デモ：星空の郵便",
+      "aliases": [],
+      "date": "2026-07-01",
+      "format": "TV",
+      "sourceFormat": "TV",
+      "dateSource": "demo",
+      "sourceKey": "demo",
+      "sourceAt": "2026-10-01T00:00:00.000Z",
+      "archiveEligible": false,
+      "details": {
+        "summary": "这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。",
+        "image": "/demo-poster.svg",
+        "tags": [
+          "冒险",
+          "治愈"
+        ],
+        "episodes": 12,
+        "ratings": {},
+        "sourceKey": "demo",
+        "sourceAt": "2026-10-01T00:00:00.000Z"
+      }
+    },
+    {
+      "bgm": 900000006,
+      "key": "bgm:900000006",
+      "title": "示例：旧书店的午后",
+      "originalTitle": "デモ：古本屋の午後",
+      "aliases": [],
+      "date": "2025-10-01",
+      "format": "TV",
+      "sourceFormat": "TV",
+      "dateSource": "demo",
+      "sourceKey": "demo",
+      "sourceAt": "2026-10-01T00:00:00.000Z",
+      "archiveEligible": false,
+      "details": {
+        "summary": "这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。",
+        "image": "/demo-poster.svg",
+        "tags": [
+          "日常",
+          "治愈"
+        ],
+        "episodes": 12,
+        "ratings": {},
+        "sourceKey": "demo",
+        "sourceAt": "2026-10-01T00:00:00.000Z"
+      }
+    }
+  ]
+}

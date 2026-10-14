@@ -1,0 +1,41 @@
+/* Imports, reset and semantic base only. Feature ownership is explicit in layout.tsx. */
+@import "tailwindcss";
+@import "./heroui.css";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+@source not "../data";
+@source inline("collapse ring");
+@theme inline{
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring)
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:auto;scroll-padding-top:var(--gallery-top,140px)}
+body{margin:0;background:var(--tf-canvas);color:var(--tf-text);font-family:var(--tf-font);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit}
+button,a,input{touch-action:manipulation}
+button{cursor:pointer}button:disabled{cursor:default}
+a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--tf-focus);outline-offset:3px}
+::selection{background:var(--tf-soft-strong);color:var(--tf-text)}
+img{max-width:100%}
+.skip-to-catalog{position:fixed;left:16px;top:-100px;z-index:100;background:var(--tf-raised);color:var(--tf-text);padding:12px 16px;border-radius:12px}.skip-to-catalog:focus{top:12px}#catalog-main:focus{outline:0}
+.spinning{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){:root{--skeleton-animation:none}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media(forced-colors:active){:is(.poster-frame,.search-control,.gallery-search){border:1px solid CanvasText}:is(button,a){forced-color-adjust:auto}}

@@ -1,0 +1,1 @@
+export function rankingResponse(req: Request, deps: {registry: ()=>Promise<any>; details: (registry: any, ids: number[])=>Promise<Record<string,any>>; snapshot: ()=>Promise<{payload: string; previous_payload?: string|null; attempted_at?: number; last_error?: string|null}|null>}): Promise<Response>;

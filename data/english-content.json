@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "source": "Original synthetic demo fixtures",
+    "sourceUrl": "https://example.invalid/demo-data",
+    "snapshotUrl": "https://example.invalid/demo-data",
+    "retrievedAt": "2026-10-01T00:00:00.000Z",
+    "generatedAt": "2026-10-01T00:00:00.000Z",
+    "synthetic": true,
+    "license": "UNLICENSED",
+    "attribution": "Fictional examples authored for this source demo; not third-party catalog data.",
+    "notes": [
+      "Numeric IDs are local synthetic fixtures, not real Bangumi IDs.",
+      "Dates are illustrative and generated for the current quarter.",
+      "No real ratings, reviews, posters, stream listings or playback verification are included."
+    ],
+    "language": "en"
+  },
+  "items": {
+    "900000001": {
+      "summary": "An original fictional record for interface testing, not a real anime. Dates, genres and episode counts are illustrative. No real ratings, reviews or viewing records are included.",
+      "watchPoints": [],
+      "originalName": "Demo: Paper Plane Observatory",
+      "name": "Demo: Paper Plane Observatory",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000002": {
+      "summary": "An original fictional record for interface testing, not a real anime. Dates, genres and episode counts are illustrative. No real ratings, reviews or viewing records are included.",
+      "watchPoints": [],
+      "originalName": "Demo: Moonlight Workshop",
+      "name": "Demo: Moonlight Workshop",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000003": {
+      "summary": "An original fictional record for interface testing, not a real anime. Dates, genres and episode counts are illustrative. No real ratings, reviews or viewing records are included.",
+      "watchPoints": [],
+      "originalName": "Demo: Sunday Without a Map",
+      "name": "Demo: Sunday Without a Map",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000004": {
+      "summary": "An original fictional record for interface testing, not a real anime. Dates, genres and episode counts are illustrative. No real ratings, reviews or viewing records are included.",
+      "watchPoints": [],
+      "originalName": "Demo: Glass Garden Short",
+      "name": "Demo: Glass Garden Short",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000005": {
+      "summary": "An original fictional record for interface testing, not a real anime. Dates, genres and episode counts are illustrative. No real ratings, reviews or viewing records are included.",
+      "watchPoints": [],
+      "originalName": "Demo: The Post and the Stars",
+      "name": "Demo: The Post and the Stars",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000006": {
+      "summary": "An original fictional record for interface testing, not a real anime. Dates, genres and episode counts are illustrative. No real ratings, reviews or viewing records are included.",
+      "watchPoints": [],
+      "originalName": "Demo: An Afternoon in a Bookshop",
+      "name": "Demo: An Afternoon in a Bookshop",
+      "sourceUrl": "https://example.invalid/demo-data"
+    }
+  }
+}

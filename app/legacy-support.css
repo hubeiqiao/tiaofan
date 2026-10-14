@@ -1,0 +1,68 @@
+/* Ancillary working controls retained after retiring mobile.css and discovery.css.
+   No old header, hero, catalog, card, or overlay composition lives here. */
+
+/* Historical scope and source disclosure. */
+.history-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; margin: 0 0 24px; min-width: 0; }
+.history-toolbar > [data-slot="tabs"] { max-width: 100%; min-width: 0; }
+.history-toolbar [data-slot="tabs-list"] { display: flex; align-items: center; justify-content: flex-start; gap: 8px; width: max-content; max-width: 100%; height: auto; min-height: 44px; padding: 0; overflow-x: auto; scrollbar-width: none; background: transparent; border: 0; border-radius: 0; color: var(--tf-text); }
+.history-toolbar [data-slot="tabs-trigger"] { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 8px; min-width: max-content; min-height: 44px; height: auto; padding: 10px 14px; border: 1px solid var(--tf-line); border-radius: 999px; background: var(--tf-material-soft); color: var(--tf-muted); box-shadow: none; font-size: 14px; line-height: 1.4; white-space: nowrap; word-break: keep-all; }
+.history-toolbar [data-slot="tabs-trigger"][data-state="active"] { background: var(--tf-text); border-color: var(--tf-text); color: var(--tf-canvas); box-shadow: none; }
+.history-toolbar [data-slot="tabs-trigger"] > span { flex: none; white-space: nowrap; font-size: 12px; font-variant-numeric: tabular-nums; color: inherit; opacity: .8; }
+.history-source { flex: 0 1 500px; color: var(--tf-muted); font-size: 12px; line-height: 1.65; }
+.history-source summary { cursor: pointer; width: fit-content; min-height: 44px; display: flex; align-items: center; gap: 6px; text-decoration: underline; text-underline-offset: 4px; }
+.history-source p { margin: 4px 0 12px; }
+
+/* Existing filter-field and weekday controls, reusable in the new sheet. */
+.filter-fields { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 14px 16px; margin: 0; }
+.filter-fields > .editorial-field { display: flex; flex: 0 1 190px; flex-direction: column; gap: 6px; min-width: 150px; max-width: 240px; color: var(--tf-muted); font-size: 12px; line-height: 1.5; }
+.filter-fields [data-slot="select-trigger"] { display: inline-flex; align-items: center; min-width: 0; width: 100%; min-height: 44px; height: auto; padding: 10px 12px; border: 1px solid var(--tf-control-line); border-radius: 6px; background: var(--tf-raised); color: var(--tf-text); box-shadow: none; font-size: 14px; line-height: 1.5; }
+.weekday-choices { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; margin-top: 16px; }
+.weekday-choices > span { color: var(--tf-muted); font-size: 12px; }
+.weekday-choices > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.weekday-choices button { min-height: 44px; min-width: 44px; padding: 8px 12px; border: 1px solid var(--tf-line); border-radius: 6px; background: transparent; color: var(--tf-muted); font-size: 13px; white-space: nowrap; }
+.weekday-choices button.selected { background: var(--tf-soft); border-color: var(--tf-control-line); color: var(--tf-text); font-weight: 700; }
+
+/* Shared rating evidence. */
+.score-chips .rating-chip { flex-wrap: wrap; white-space: normal; row-gap: 0; }
+.score-chips .rating-chip > :is(span, strong) { white-space: nowrap; }
+.score-chips .rating-count { font-size: 11px; line-height: 1.5; white-space: nowrap; color: var(--tf-muted); }
+
+/* Personal recommendation controls remain functional if enabled. */
+.personal-prompt { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin: 24px 0; }
+.personal-prompt strong { font-size: 20px; font-weight: 750; }
+.personal-prompt p, .personal-scope { max-width: 72ch; margin: 7px 0 0; font-size: 13px; line-height: 1.7; color: var(--tf-muted); }
+.personal-prompt > button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; flex: none; min-height: 44px; padding: 0 18px; border: 1px solid var(--tf-action); border-radius: var(--tf-radius); font-size: 14px; white-space: nowrap; }
+.personal-period { display: grid; gap: 6px; flex: none; color: var(--tf-muted); font-size: 12px; }
+.personal-period select { height: 44px; padding: 0 12px; border: 1px solid var(--tf-control-line); border-radius: var(--tf-radius); background: var(--tf-raised); color: var(--tf-text); }
+.personal-picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 24px; }
+.personal-picks article { min-width: 0; }
+.personal-picks img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 8px; }
+
+.personal-prompt > button { background:var(--tf-action); border-color:var(--tf-action); color:var(--tf-action-ink); font-weight:650; }
+
+@media (max-width:700px) {
+  .history-toolbar { align-items: flex-start; gap: 6px 12px; margin-bottom: 20px; }
+  .history-toolbar [data-slot="tabs-trigger"] { padding: 10px 12px; gap: 6px; font-size: 13px; }
+  .history-source { flex-basis: 100%; }
+  .history-source summary { min-height: 36px; }
+  .filter-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 12px; }
+  .filter-fields > .editorial-field { display: flex; min-width: 0; width: 100%; max-width: none; gap: 6px; }
+  .filter-fields [data-slot="select-trigger"] { padding: 10px; font-size: 13px; }
+  .weekday-choices { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .weekday-choices > div { gap: 6px; }
+  .personal-prompt { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .personal-prompt strong { font-size: 20px; }
+  .personal-prompt p { font-size: 14px; }
+  .personal-prompt > button { min-height: 44px; }
+  .personal-period { flex-wrap: wrap; gap: 8px; }
+  .personal-period select { min-height: 44px; font-size: 14px; }
+  .personal-library-content:not(.expanded) { display: none; }
+  .toast { bottom: calc(12px + env(safe-area-inset-bottom)); max-width: calc(100vw - 24px); gap: 12px; padding: 8px 14px; }
+  .scroll-status { flex-wrap: wrap; gap: 8px 12px; padding-top: 24px; font-size: 13px; }
+  .scroll-status > span { width: 100%; text-align: center; }
+}
+
+@media (max-width:359px) {
+  .filter-fields { grid-template-columns: 1fr; }
+  .history-toolbar [data-slot="tabs-trigger"] { padding-inline: 10px; }
+}

@@ -1,0 +1,62 @@
+/* Footer-only, self-hosted Noto subsets: coherent Latin/CJK shapes, no third-party request.
+   The assets cover footer copy + timestamps; see public/fonts/footer/README.md. */
+
+
+/* A shared illustrated site footer, with a small inline creator credit. */
+.site-wordmark{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font:inherit;color:var(--tf-text)}
+.site-wordmark>img{width:36px;height:36px;object-fit:contain;flex:none}
+.site-wordmark>strong{font:inherit;font-weight:650;letter-spacing:-.5px}
+.site-footer{--footer-glow:#fff0d9;--footer-air:#e9f1f5;position:relative;isolation:isolate;margin-top:16px;padding:12px 24px 16px;color:var(--tf-text);font-family:"Tiaofan Footer SC","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;font-weight:400;font-size:13px;line-height:1.6;letter-spacing:normal;font-synthesis:none}
+.site-footer:lang(ja){font-family:"Tiaofan Footer JP","Hiragino Sans","Yu Gothic","Noto Sans CJK JP",system-ui,sans-serif}
+.site-footer-landscape{position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse 580px 160px at 50% 44%,var(--footer-glow),transparent 100%),linear-gradient(180deg,transparent 16%,var(--footer-air) 100%);mask-image:linear-gradient(180deg,transparent,#000 18%)}
+.site-footer-inner{width:100%;max-width:1080px;margin:0 auto}
+.site-footer-scene{display:grid;grid-template-columns:minmax(250px,1fr) 340px;align-items:center;gap:38px;width:100%;max-width:780px;min-height:172px;margin:0 auto 12px}
+.site-footer-identity{min-width:0;text-align:center}
+.site-footer-characters{position:relative;width:340px;height:150px;justify-self:center}
+.site-footer-cat,.site-footer-figure{position:absolute;bottom:0;aspect-ratio:3/2}
+.site-footer-cat{left:0;width:172px;z-index:1}
+.site-footer-figure{right:0;width:204px;z-index:2}
+.site-footer-cat>img,.site-footer-figure>img{display:block;width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 7px 7px rgb(41 74 94/.08))}
+.site-footer-brand{display:flex;align-items:center;justify-content:center;min-height:44px;font-size:34px;line-height:1.3;text-decoration:none;margin:0}
+.site-footer .site-wordmark>img{display:none}
+.site-footer .site-wordmark>strong{font-weight:600;letter-spacing:0}
+.site-footer nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.site-footer nav :is(a,button){display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0;border:0;background:transparent;color:var(--tf-muted);font:inherit;font-size:13px;line-height:1.5;text-decoration:none;white-space:nowrap}
+.site-footer nav :is(a,button):hover{color:var(--tf-action-text);text-decoration:underline;text-underline-offset:4px}
+.site-footer .site-footer-navigation{gap:0 24px;margin:8px 0 0}
+.site-footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:4px;border-top:1px solid color-mix(in srgb,var(--tf-muted) 13%,transparent)}
+.site-footer .site-footer-credit{gap:0 8px;flex-wrap:nowrap}
+.site-footer .site-footer-credit :is(a,button){font-size:12px}
+.site-footer-credit>span{color:var(--tf-muted);opacity:.6;font-size:11px}
+.site-footer-author-home::after{content:"";width:9px;height:9px;margin-left:4px;flex:none;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 9 9 3M3 3h6v6' fill='none' stroke='black' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.site-footer-timestamp{display:block;font-size:11px;color:var(--tf-muted);line-height:1.7;text-align:right;overflow-wrap:anywhere}
+.site-footer :is(a,button):focus-visible{outline:3px solid var(--tf-focus);outline-offset:3px;border-radius:6px}
+html[data-theme="dark"] .site-footer{--footer-glow:#30281f;--footer-air:#17242c}
+.public-content .public-brand{flex-wrap:wrap;gap:4px 16px}
+.public-content .public-brand>.site-wordmark{font-size:24px}
+@media(max-width:760px){
+ .site-wordmark>img{width:32px;height:32px}
+ .site-footer{margin-top:12px;padding:8px 12px 16px}
+ .site-footer-inner{max-width:520px}
+ .site-footer-scene{display:flex;flex-direction:column;gap:0;min-height:0;max-width:none;margin-bottom:6px}
+ .site-footer-identity{display:contents}
+ .site-footer-brand{order:0;font-size:26px;min-height:44px}
+ .site-footer-characters{order:1;width:300px;max-width:100%;height:133px;margin-top:0}
+ .site-footer-cat{width:154px}
+ .site-footer-figure{width:174px}
+ .site-footer .site-footer-navigation{order:2;gap:0 18px;margin:4px 0 0}
+ .site-footer nav :is(a,button){font-size:12px}
+ .site-footer-bottom{flex-direction:column;gap:0;padding-top:0}
+ .site-footer-timestamp{text-align:center;font-size:11px}
+ .public-content .public-brand>.site-wordmark{font-size:22px}
+}
+@media(max-width:359px){.site-footer{padding-inline:4px}.site-footer .site-footer-navigation{column-gap:12px}.site-footer-characters{width:284px}.site-footer-cat{width:146px}.site-footer-figure{width:168px}}
+@media(forced-colors:active){.site-footer-landscape{display:none}.site-footer-bottom{border-top:1px solid CanvasText}.site-footer nav :is(a,button){color:LinkText}.site-footer-cat>img,.site-footer-figure>img{filter:none}}
+.brand-saved-icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;flex:none;pointer-events:none}.brand-saved-icon>img{display:block;width:24px;height:24px;object-fit:contain}.brand-saved-icon>svg{display:none}
+.brand-empty-library{display:block;width:128px;height:128px;object-fit:contain;margin:0 auto 12px}
+.editorial-button[data-variant=default],.action-primary{box-shadow:inset 0 1px 0 rgb(255 255 255/.22),0 1px 2px rgb(0 0 0/.12)}
+.editorial-button[data-variant=default]:not(:disabled):active,.action-primary:not(:disabled):active{box-shadow:inset 0 2px 3px rgb(0 0 0/.16);transform:translateY(1px)}
+@media(prefers-reduced-motion:reduce){.editorial-button[data-variant=default],.action-primary{transition:none}.editorial-button[data-variant=default]:not(:disabled):active,.action-primary:not(:disabled):active{transform:none}}
+@media(forced-colors:active){.brand-saved-icon>img{display:none}.brand-saved-icon>svg{display:block}.editorial-button[data-variant=default],.action-primary{box-shadow:none}}
+
+.demo-banner{padding:10px 20px;text-align:center;background:#263f54;color:#fff;font:600 13px/1.5 system-ui,sans-serif;position:relative;z-index:100;}

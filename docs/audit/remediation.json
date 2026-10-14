@@ -1,0 +1,368 @@
+{
+  "checkedAt": "2026-10-14T21:47:18.925Z",
+  "scope": "Isolated source release candidate; canonical and live deployment not modified.",
+  "before": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 7,
+      "high": 21,
+      "critical": 1,
+      "total": 30
+    },
+    "dependencies": {
+      "prod": 233,
+      "dev": 649,
+      "optional": 223,
+      "peer": 46,
+      "peerOptional": 0,
+      "total": 926
+    }
+  },
+  "after": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 4,
+      "high": 8,
+      "critical": 0,
+      "total": 12
+    },
+    "dependencies": {
+      "prod": 233,
+      "dev": 624,
+      "optional": 195,
+      "peer": 47,
+      "peerOptional": 0,
+      "total": 899
+    }
+  },
+  "productionOnly": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "dependencies": {
+      "prod": 233,
+      "dev": 624,
+      "optional": 195,
+      "peer": 47,
+      "peerOptional": 0,
+      "total": 899
+    }
+  },
+  "changes": [
+    {
+      "package": "next",
+      "before": "16.3.4",
+      "after": "16.3.8",
+      "group": "dependencies"
+    },
+    {
+      "package": "react",
+      "before": "19.2.6",
+      "after": "19.2.9",
+      "group": "dependencies"
+    },
+    {
+      "package": "react-dom",
+      "before": "19.2.6",
+      "after": "19.2.9",
+      "group": "dependencies"
+    },
+    {
+      "package": "@cloudflare/vite-plugin",
+      "before": "1.37.1",
+      "after": "1.64.0",
+      "group": "devDependencies"
+    },
+    {
+      "package": "@cloudflare/workers-types",
+      "before": "4.20260515.1",
+      "after": "5.20261006.1",
+      "group": "devDependencies"
+    },
+    {
+      "package": "@vitejs/plugin-rsc",
+      "before": "0.5.26",
+      "after": "0.5.37",
+      "group": "devDependencies"
+    },
+    {
+      "package": "esbuild",
+      "before": "0.28.0",
+      "after": "0.28.2",
+      "group": "devDependencies"
+    },
+    {
+      "package": "eslint-config-next",
+      "before": "16.3.4",
+      "after": "16.3.8",
+      "group": "devDependencies"
+    },
+    {
+      "package": "react-server-dom-webpack",
+      "before": "19.2.6",
+      "after": "19.2.9",
+      "group": "devDependencies"
+    },
+    {
+      "package": "vinext",
+      "before": "1.0.0-beta.5",
+      "after": "1.2.0",
+      "group": "devDependencies"
+    },
+    {
+      "package": "vite",
+      "before": "8.0.13",
+      "after": "8.0.16",
+      "group": "devDependencies"
+    },
+    {
+      "package": "wrangler",
+      "before": "4.92.0",
+      "after": "4.151.0",
+      "group": "devDependencies"
+    }
+  ],
+  "transitiveOverride": {
+    "fflate": {
+      "before": "0.7.3",
+      "after": "0.7.5",
+      "reason": "Satori pins 0.7.3; patch-only security override for GHSA-px8p-9vwx-vf98"
+    }
+  },
+  "removedOverride": "miniflare.sharp0.35.4 (now sharp0.35.5 from upstream dependencies)",
+  "vendoredRscVersion": "19.3.0",
+  "residualRootAdvisories": [
+    {
+      "id": "GHSA-vfj7-8cjw-p6xm",
+      "package": "braces",
+      "version": "3.0.3",
+      "severity": "high",
+      "fix": "No published patch as of review",
+      "scope": "Developer build and lint pattern processing; no direct application use found",
+      "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm"
+    },
+    {
+      "id": "GHSA-67mh-4wv8-2f99",
+      "package": "esbuild",
+      "version": "0.18.20",
+      "severity": "moderate",
+      "fix": "Pinned by deprecated @esbuild-kit/core-utils under drizzle-kit; automatic audit suggests inappropriate downgrade",
+      "scope": "Legacy optional database schema developer tooling; no dev-server use by application found",
+      "url": "https://github.com/evanw/esbuild/security/advisories/GHSA-67mh-4wv8-2f99"
+    }
+  ],
+  "securityCaveats": [
+    "npm audit is a registry advisory scan, not proof that all packages or application code are safe.",
+    "--omit=dev excludes bundled framework runtime dependencies classified dev; separate root and vendored RSC checks were performed.",
+    "Source candidate must pass full typecheck/build/tests/local smoke after integration.",
+    "Critical Next next/og advisory was installed-version affected, but no app use of next/og or ImageResponse found and no exploitability is claimed."
+  ],
+  "verification": {
+    "cleanInstall": "Final npm ci succeeded:729 packages,16s",
+    "dependencyResolution": "npm ls selected direct framework and React packages exited0 with expected versions",
+    "appValidation": "Pending builder integration"
+  },
+  "sources": [
+    "https://github.com/vercel/next.js/security/advisories/GHSA-vcvr-r3jv-pc5j",
+    "https://github.com/react/react/security/advisories/GHSA-wx67-qw84-cm4g",
+    "https://github.com/vitejs/vite/security/advisories/GHSA-fx2h-pf6j-xcff",
+    "https://github.com/lovell/sharp/security/advisories/GHSA-wq5f-xc86-pv6w",
+    "https://github.com/cloudflare/vinext/releases/tag/vinext%401.2.0",
+    "https://github.com/vitejs/vite-plugin-react/releases/tag/plugin-rsc%400.5.37",
+    "https://github.com/cloudflare/workers-sdk/releases/tag/%40cloudflare%2Fvite-plugin%401.64.0"
+  ],
+  "changedDirectLicenseReview": [
+    {
+      "package": "next",
+      "version": "16.3.8",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/next/license.md"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": "vercel/next.js"
+    },
+    {
+      "package": "react",
+      "version": "19.2.9",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/react/LICENSE"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/react/react.git",
+        "directory": "packages/react"
+      }
+    },
+    {
+      "package": "react-dom",
+      "version": "19.2.9",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/react-dom/LICENSE"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/react/react.git",
+        "directory": "packages/react-dom"
+      }
+    },
+    {
+      "package": "@cloudflare/vite-plugin",
+      "version": "1.64.0",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [],
+      "evidence": "No standalone license file in npm package; declaration and official repository license examined where accessible",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/cloudflare/workers-sdk.git",
+        "directory": "packages/vite-plugin-cloudflare"
+      }
+    },
+    {
+      "package": "@cloudflare/workers-types",
+      "version": "5.20261006.1",
+      "lockLicense": "MIT OR Apache-2.0",
+      "installedLicense": "MIT OR Apache-2.0",
+      "match": true,
+      "standaloneLicenseFiles": [],
+      "evidence": "No standalone license file; index.d.ts has Apache-2.0 header with Cloudflare/Microsoft copyrights",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/cloudflare/workerd"
+      }
+    },
+    {
+      "package": "@vitejs/plugin-rsc",
+      "version": "0.5.37",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [],
+      "evidence": "No standalone license file in npm package; declaration and official repository license examined where accessible",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vitejs/vite-plugin-react.git",
+        "directory": "packages/plugin-rsc"
+      }
+    },
+    {
+      "package": "esbuild",
+      "version": "0.28.2",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/esbuild/LICENSE.md"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/evanw/esbuild.git"
+      }
+    },
+    {
+      "package": "eslint-config-next",
+      "version": "16.3.8",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [],
+      "evidence": "No standalone license file in npm package; declaration and official repository license examined where accessible",
+      "repository": {
+        "url": "vercel/next.js",
+        "directory": "packages/eslint-config-next"
+      }
+    },
+    {
+      "package": "react-server-dom-webpack",
+      "version": "19.2.9",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/react-server-dom-webpack/LICENSE"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/react/react.git",
+        "directory": "packages/react-server-dom-webpack"
+      }
+    },
+    {
+      "package": "vinext",
+      "version": "1.2.0",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/vinext/LICENSE"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cloudflare/vinext.git"
+      }
+    },
+    {
+      "package": "vite",
+      "version": "8.0.16",
+      "lockLicense": "MIT",
+      "installedLicense": "MIT",
+      "match": true,
+      "standaloneLicenseFiles": [
+        "node_modules/vite/LICENSE.md"
+      ],
+      "evidence": "Installed license text examined",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vitejs/vite.git",
+        "directory": "packages/vite"
+      }
+    },
+    {
+      "package": "wrangler",
+      "version": "4.151.0",
+      "lockLicense": "MIT OR Apache-2.0",
+      "installedLicense": "MIT OR Apache-2.0",
+      "match": true,
+      "standaloneLicenseFiles": [],
+      "evidence": "No standalone license file in npm package; declaration and official repository license examined where accessible",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/cloudflare/workers-sdk.git",
+        "directory": "packages/wrangler"
+      }
+    }
+  ],
+  "files": {
+    "package.jsonSha256": "8ca058da63908d2e1e33a920fb4e5243fb3a3f11b4b65c0ea88e0250e7f49dd6",
+    "package-lock.jsonSha256": "cccc3baf074786eb0f0a4d978e7feb6bcaa8de70d316a2438a55514c183a7e08"
+  },
+  "licenseSources": [
+    "https://github.com/vercel/next.js/blob/v16.3.8/license.md",
+    "https://github.com/cloudflare/workers-sdk/blob/main/LICENSE-MIT",
+    "https://github.com/cloudflare/workers-sdk/blob/main/LICENSE-APACHE",
+    "https://github.com/vitejs/vite-plugin-react",
+    "https://github.com/cloudflare/workerd"
+  ]
+}

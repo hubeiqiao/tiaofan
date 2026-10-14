@@ -1,0 +1,1 @@
+export async function GET(){return Response.json({demo:true,items:[],hasNext:false,at:null,availability:'unavailable',note:'Live ratings are disabled. No real audience scores are included.'},{headers:{'Cache-Control':'no-store'}})}

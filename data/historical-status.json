@@ -1,0 +1,17 @@
+{
+  "sourceUrl": "https://example.invalid/demo-data",
+  "asOf": "2026-10-01T00:00:00.000Z",
+  "fetchedAt": null,
+  "revision": "synthetic-demo-v1",
+  "browsableTV": 1,
+  "archiveVerifiedTV": 0,
+  "withRatings": 0,
+  "withSynopses": 1,
+  "typedRelations": 0,
+  "metadataOnlyTV": 0,
+  "archiveAutoRefresh": false,
+  "scope": "Synthetic examples, not a verified archive.",
+  "license": "UNLICENSED",
+  "attribution": "Fictional examples authored for this source demo; not third-party catalog data.",
+  "synthetic": true
+}

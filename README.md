@@ -10,7 +10,19 @@ A multilingual anime discovery experience in English, Chinese and Japanese, with
 
 **The entire website was built with GPT Sites through iterative prompting, implementation, and testing.** Product design, interface development and successive refinements were developed in that workflow. This was an iterative build, not a claim that a complete production product appeared from a single prompt.
 
-This repository makes a sanitized source edition available for review and further development. It is an independently created project, not an official OpenAI product or endorsement. [How it was built →](docs/BUILT_WITH_GPT_SITES.md)
+This repository makes a sanitized source edition available for review. Reuse and further development remain subject to the owner's eventual code-license selection. It is an independently created project, not an official OpenAI product or endorsement. [How it was built →](docs/BUILT_WITH_GPT_SITES.md)
+
+## Preview
+
+### Desktop catalog
+
+![Tiaofan live English desktop catalog, with season navigation and source filters](docs/screenshots/desktop-catalog-en.jpg)
+
+### Narrow-browser responsive catalog
+
+<img src="docs/screenshots/narrow-catalog-en.jpg" width="360" alt="Tiaofan live catalog rendered in a genuinely narrow browser window, with a two-column layout">
+
+Captured from the [hosted product](https://anime.hubeiqiao.com/en) on October 14, 2026. These are genuine, unedited browser captures, not renders of the synthetic source demo. The narrow view demonstrates responsive browser rendering; it is not a physical-device test. Third-party artwork and data visible in the screenshots retain their own rights. [Screenshot provenance and rights →](docs/screenshots/README.md)
 
 ## Explore the product
 

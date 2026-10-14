@@ -1,0 +1,15 @@
+// Only non-account browsing controls are persisted. Never store library or model results.
+export const BROWSE_STATE_KEY='tiaofan:browse:v1';
+export type BrowseState={version:1;view:string;sort:string;rankSource:string;query:string;day:string;minVotes:string;media:string;airing:string;language:string;limit:number;scroll:number;historicalMode?:'all'|'highlights';historicalYear?:string;filtersOpen?:boolean;publicDetail?:{id:number;tab:'story'|'reviews'|'watch'|'ratings'}};
+const choices:Record<string,string[]>={view:['current','previous','historical','rank','mine'],sort:['bgm','kitsu','mal'],rankSource:['bgm','kitsu','mal'],day:['all','星期一','星期二','星期三','星期四','星期五','星期六','星期日'],minVotes:['0','10','100','1000'],media:['all','series','movie','other'],airing:['all','aired','upcoming','unknown'],language:['all','ja','zh-Hans','en']};
+export function parseBrowseState(raw:string|null):BrowseState|null{
+ if(!raw||raw.length>2400)return null;try{const v=JSON.parse(raw);if(!v||v.version!==1||typeof v.query!=='string'||v.query.length>160)return null;
+ for(const [key,allowed]of Object.entries(choices))if(!allowed.includes(v[key]))return null;
+ if(!Number.isInteger(v.limit)||v.limit<24||v.limit>20000||!Number.isFinite(v.scroll)||v.scroll<0||v.scroll>10000000)return null;
+ if(v.historicalMode!==undefined&&!['all','highlights'].includes(v.historicalMode))return null;
+ const extra:Pick<BrowseState,'filtersOpen'|'publicDetail'|'historicalYear'>={};if(v.historicalYear!==undefined){if(v.historicalYear!=='all'&&!(typeof v.historicalYear==='string'&&/^\d{4}$/.test(v.historicalYear)&&Number(v.historicalYear)>=1900&&Number(v.historicalYear)<=2100))return null;extra.historicalYear=v.historicalYear;}if(typeof v.filtersOpen==='boolean')extra.filtersOpen=v.filtersOpen;if(v.publicDetail&&Number.isSafeInteger(v.publicDetail.id)&&v.publicDetail.id>0&&v.publicDetail.id<1000000000&&['story','reviews','watch','ratings'].includes(v.publicDetail.tab))extra.publicDetail={id:v.publicDetail.id,tab:v.publicDetail.tab};
+ return{...extra,version:1,historicalMode:v.historicalMode||'all',view:v.view,sort:v.view==='mine'?'bgm':v.sort,rankSource:v.rankSource,query:v.query,day:['current','previous','historical'].includes(v.view)?'all':v.day,minVotes:v.minVotes==='10'&&!(v.view==='historical'&&(v.historicalMode||'all')==='all')?'0':v.minVotes,media:v.view==='historical'&&v.historicalMode==='highlights'?'series':v.media,airing:['current','previous','historical','mine'].includes(v.view)?'all':v.airing,language:v.view==='historical'?'all':v.language,limit:v.limit,scroll:v.scroll};
+ }catch{return null}
+}
+export function readBrowseState(storage:Pick<Storage,'getItem'>,search='',hash=''){if(search||hash)return null;try{return parseBrowseState(storage.getItem(BROWSE_STATE_KEY))}catch{return null}}
+export function saveBrowseState(storage:Pick<Storage,'setItem'>,value:BrowseState){try{const clean=parseBrowseState(JSON.stringify(value));if(clean)storage.setItem(BROWSE_STATE_KEY,JSON.stringify(clean))}catch{}}

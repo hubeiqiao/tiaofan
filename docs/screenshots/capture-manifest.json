@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "desktop-catalog-en.jpg",
+    "url": "https://anime.hubeiqiao.com/en",
+    "captured_at_utc": "2026-10-14T22:59:25.035Z",
+    "pixel_dimensions": [
+      1165,
+      747
+    ],
+    "dom_client_dimensions_css_px": [
+      1165,
+      757
+    ],
+    "caption": "Desktop catalog with seasonal browsing, source filters, and anime ratings.",
+    "sha256": "b6d46e553fe71e3578011e5d65c4c732839a28a30b48962338b92d39950b254f",
+    "method": "Unedited viewport JPEG captured by supported cloud-browser screenshot API. Narrow layout was produced by normal native browser-window resizing, not image resizing, cropping, or device emulation.",
+    "privacy": "Only the public catalog is visible. No sign-in was performed. No personal list or account data is shown.",
+    "rights": "Screenshots contain incidental third-party anime artwork and data. Such artwork, titles, logos, and third-party material remain the property of their respective rights holders and are excluded from the repository code license."
+  },
+  {
+    "filename": "narrow-catalog-en.jpg",
+    "url": "https://anime.hubeiqiao.com/en",
+    "captured_at_utc": "2026-10-14T23:00:50.335Z",
+    "pixel_dimensions": [
+      485,
+      734
+    ],
+    "dom_client_dimensions_css_px": [
+      485,
+      757
+    ],
+    "caption": "Narrow-browser responsive catalog with a two-column card layout.",
+    "sha256": "cbbdbc3d3913709ae7bad46e1db0d243f158c1958d054e4f7ad40f12bc41db22",
+    "method": "Unedited viewport JPEG captured by supported cloud-browser screenshot API. Narrow layout was produced by normal native browser-window resizing, not image resizing, cropping, or device emulation.",
+    "privacy": "Only the public catalog is visible. No sign-in was performed. No personal list or account data is shown.",
+    "rights": "Screenshots contain incidental third-party anime artwork and data. Such artwork, titles, logos, and third-party material remain the property of their respective rights holders and are excluded from the repository code license."
+  }
+]

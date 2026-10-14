@@ -1,0 +1,27 @@
+{
+  "name": "tiaofan",
+  "owner": "hubeiqiao",
+  "description": "三语动画发现与追番工具 / Trilingual anime discovery and watchlist app",
+  "homepage": "https://anime.hubeiqiao.com",
+  "topics": [
+    "anime",
+    "anime-discovery",
+    "bangumi",
+    "react",
+    "typescript",
+    "vinext",
+    "cloudflare-workers",
+    "i18n",
+    "mcp"
+  ],
+  "defaultBranch": "main",
+  "licenseStatus": "Owner decision pending; recommend MIT for original code only",
+  "releaseScope": "Sanitized source edition with synthetic data and neutral assets",
+  "publicReleaseRequires": [
+    "Owner license selection",
+    "Accurate disclosure of validation limits",
+    "Remote commit and CI verification"
+  ],
+  "visibility": "public",
+  "repository": "https://github.com/hubeiqiao/tiaofan"
+}

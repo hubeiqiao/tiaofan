@@ -1,0 +1,17 @@
+/* Published HeroUI 3.2.6 component styles only; Tailwind is imported once by globals.css. */
+@import "@heroui/styles/base/base.css" layer(base);
+@import "@heroui/styles/themes/default/index.css" layer(theme);
+@import "@heroui/styles/components/button.css" layer(components);
+@import "@heroui/styles/components/card.css" layer(components);
+@import "@heroui/styles/components/input.css" layer(components);
+@import "@heroui/styles/components/label.css" layer(components);
+@import "@heroui/styles/components/popover.css" layer(components);
+@import "@heroui/styles/components/tooltip.css" layer(components);
+@import "@heroui/styles/components/radio.css" layer(components);
+@import "@heroui/styles/components/radio-group.css" layer(components);
+@import "@heroui/styles/components/select.css" layer(components);
+@import "@heroui/styles/components/list-box.css" layer(components);
+@import "@heroui/styles/components/list-box-item.css" layer(components);
+
+@import "@heroui/styles/utilities";
+@import "@heroui/styles/variants";

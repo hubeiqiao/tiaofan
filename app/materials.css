@@ -1,0 +1,25 @@
+/* Browser-native materials, grounded in Apple.com web surfaces.
+   No native Apple rendering API or optical-refraction claim. */
+:root,html[data-theme=light]{
+ --tf-reader-action:#0055aa;--tf-reader-material:#fff;--tf-reader-control:#fff;--tf-reader-child:transparent;--tf-material-bg:#fff;--tf-material-strong:#fff;--tf-material-control:#fff;--tf-material-soft:#efeff2;
+ --tf-material-line:rgb(0 0 0/.075);--tf-material-highlight:rgb(255 255 255/.85);
+ --tf-material-shadow:0 4px 20px rgb(29 29 31/.055),0 1px 2px rgb(29 29 31/.045);
+ --tf-material-filter:none;--tf-radius-lg:26px;--tf-radius-md:18px;--tf-radius-sm:12px;
+}
+html[data-theme=dark]{
+ --tf-reader-action:#58a6ff;--tf-reader-material:#232326;--tf-reader-control:#232326;--tf-reader-child:transparent;--tf-material-bg:#232326;--tf-material-strong:#252528;--tf-material-control:#252528;--tf-material-soft:#303033;
+ --tf-material-line:rgb(255 255 255/.12);--tf-material-highlight:rgb(255 255 255/.08);
+ --tf-material-shadow:0 8px 28px rgb(0 0 0/.22),0 1px 2px rgb(0 0 0/.18);
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ :root,html[data-theme=light]{--tf-reader-material:rgb(255 255 255/.86);--tf-reader-control:rgb(255 255 255/.26);--tf-reader-child:rgb(255 255 255/.16);--tf-material-bg:rgb(255 255 255/.72);--tf-material-strong:rgb(255 255 255/.90);--tf-material-control:rgb(255 255 255/.97);--tf-material-soft:rgb(239 239 242/.78);--tf-material-filter:blur(14px) saturate(125%)}
+ html[data-theme=dark]{--tf-reader-material:rgb(35 35 38/.90);--tf-reader-control:rgb(35 35 38/.32);--tf-reader-child:rgb(35 35 38/.18);--tf-material-bg:rgb(35 35 38/.87);--tf-material-strong:rgb(37 37 40/.95);--tf-material-control:rgb(37 37 40/.97);--tf-material-soft:rgb(48 48 51/.82)}
+}
+.material-surface{background:var(--tf-material-bg);border:1px solid var(--tf-material-line);border-radius:var(--tf-radius-lg);box-shadow:var(--tf-material-shadow);-webkit-backdrop-filter:var(--tf-material-filter);backdrop-filter:var(--tf-material-filter)}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){@media(max-width:700px){:root,html[data-theme]{--tf-material-filter:blur(8px) saturate(115%)}}}
+@media(prefers-reduced-transparency:reduce),(prefers-contrast:more){
+ :root,html[data-theme=light]{--tf-reader-action:#0055aa;--tf-reader-material:#fff;--tf-reader-control:#fff;--tf-reader-child:transparent;--tf-material-bg:#fff;--tf-material-strong:#fff;--tf-material-control:#fff;--tf-material-soft:#ededf0;--tf-material-filter:none;--tf-material-line:#86868b}
+ html[data-theme=dark]{--tf-reader-action:#58a6ff;--tf-reader-material:#232326;--tf-reader-control:#232326;--tf-reader-child:transparent;--tf-material-bg:#232326;--tf-material-strong:#252528;--tf-material-control:#252528;--tf-material-soft:#303033;--tf-material-filter:none;--tf-material-line:#8e8e93}
+}
+@media(forced-colors:active){:root,html[data-theme]{--tf-reader-action:LinkText;--tf-reader-material:Canvas;--tf-reader-control:Canvas;--tf-reader-child:transparent;--tf-material-bg:Canvas;--tf-material-strong:Canvas;--tf-material-control:Canvas;--tf-material-soft:Canvas;--tf-material-line:CanvasText;--tf-material-filter:none;--tf-material-shadow:none;--tf-material-highlight:transparent}}
+@media(prefers-reduced-motion:reduce){.material-surface{animation:none;transition:none}}

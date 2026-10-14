@@ -1,0 +1,2 @@
+import {publishedSources} from '@/lib/snapshots';
+export async function GET(req:Request){const ids=(new URL(req.url).searchParams.get('ids')||'').split(',').slice(0,20);const rows=publishedSources.snapshots.flatMap(s=>s.key.startsWith('catalog:')||s.key==='rank:bgm'?JSON.parse(s.payload).items:[]);const items=[...new Map(rows.filter((r:any)=>ids.includes(String(r.bgm))).map((r:any)=>[r.key,r])).values()];return Response.json({demo:true,items,failed:ids.filter(id=>!rows.some((r:any)=>String(r.bgm)===id)),excluded:[],at:null},{headers:{'Cache-Control':'no-store'}})}

@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "source": "Original synthetic demo fixtures",
+    "sourceUrl": "https://example.invalid/demo-data",
+    "snapshotUrl": "https://example.invalid/demo-data",
+    "retrievedAt": "2026-10-01T00:00:00.000Z",
+    "generatedAt": "2026-10-01T00:00:00.000Z",
+    "synthetic": true,
+    "license": "UNLICENSED",
+    "attribution": "Fictional examples authored for this source demo; not third-party catalog data.",
+    "notes": [
+      "Numeric IDs are local synthetic fixtures, not real Bangumi IDs.",
+      "Dates are illustrative and generated for the current quarter.",
+      "No real ratings, reviews, posters, stream listings or playback verification are included."
+    ],
+    "language": "ja"
+  },
+  "items": {
+    "900000001": {
+      "summary": "画面テスト用に作成した架空の作品です。日付・ジャンル・話数は例示で、実際の評価、レビュー、視聴記録は含まれません。",
+      "watchPoints": [],
+      "originalName": "デモ：紙飛行機観測所",
+      "name": "デモ：紙飛行機観測所",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000002": {
+      "summary": "画面テスト用に作成した架空の作品です。日付・ジャンル・話数は例示で、実際の評価、レビュー、視聴記録は含まれません。",
+      "watchPoints": [],
+      "originalName": "デモ：月あかり工房",
+      "name": "デモ：月あかり工房",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000003": {
+      "summary": "画面テスト用に作成した架空の作品です。日付・ジャンル・話数は例示で、実際の評価、レビュー、視聴記録は含まれません。",
+      "watchPoints": [],
+      "originalName": "デモ：地図のない日曜日",
+      "name": "デモ：地図のない日曜日",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000004": {
+      "summary": "画面テスト用に作成した架空の作品です。日付・ジャンル・話数は例示で、実際の評価、レビュー、視聴記録は含まれません。",
+      "watchPoints": [],
+      "originalName": "デモ：ガラスの庭の短編",
+      "name": "デモ：ガラスの庭の短編",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000005": {
+      "summary": "画面テスト用に作成した架空の作品です。日付・ジャンル・話数は例示で、実際の評価、レビュー、視聴記録は含まれません。",
+      "watchPoints": [],
+      "originalName": "デモ：星空の郵便",
+      "name": "デモ：星空の郵便",
+      "sourceUrl": "https://example.invalid/demo-data"
+    },
+    "900000006": {
+      "summary": "画面テスト用に作成した架空の作品です。日付・ジャンル・話数は例示で、実際の評価、レビュー、視聴記録は含まれません。",
+      "watchPoints": [],
+      "originalName": "デモ：古本屋の午後",
+      "name": "デモ：古本屋の午後",
+      "sourceUrl": "https://example.invalid/demo-data"
+    }
+  }
+}

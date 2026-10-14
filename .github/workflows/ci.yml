@@ -1,0 +1,50 @@
+name: Source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - run: npm ci
+      - run: node scripts/check-release.mjs
+      - run: npm run typecheck
+      - run: npm test
+      - name: Inherited lint diagnostics (non-blocking cleanup backlog)
+        continue-on-error: true
+        run: npm run lint
+      - run: npm run build
+      - name: Audit manifest production dependencies
+        run: npm audit --omit=dev --audit-level=high
+      - name: Gate all high and critical advisories with narrow documented exceptions
+        run: node scripts/audit-dependencies.mjs
+      - name: Local demo smoke test
+        shell: bash
+        run: |
+          npm run dev > "$RUNNER_TEMP/tiaofan-dev.log" 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl --silent --fail http://127.0.0.1:5173/ > /dev/null; then break; fi
+            sleep 2
+          done
+          npm run test:smoke -- http://127.0.0.1:5173

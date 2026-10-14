@@ -1,0 +1,75 @@
+/* One text hierarchy shared by catalogue, preview, and title detail. */
+.rating-evidence {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  color: var(--tf-muted, #626269);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  white-space: normal;
+}
+
+.rating-evidence .rating-evidence-main {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 4px;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  white-space: normal;
+}
+
+.rating-evidence .rating-evidence-source {
+  min-inline-size: 0;
+  color: var(--tf-muted, #626269);
+  font-size: 13px;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.rating-evidence .rating-evidence-score {
+  color: var(--tf-text, #1d1d1f);
+  font-size: 17px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.rating-evidence .rating-evidence-scale {
+  color: var(--tf-muted, #626269);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Count and qualification are one inline text run, including when it wraps. */
+.rating-evidence .rating-evidence-context {
+  display: inline;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  color: var(--tf-muted, #626269);
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.rating-evidence .rating-evidence-count {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.rating-evidence .rating-evidence-qualification {
+  display: inline;
+  font-size: 13px;
+  white-space: normal;
+}
+
+.rating-evidence .rating-evidence-separator {
+  font-size: 13px;
+}

@@ -1,0 +1,11 @@
+export const REGISTRY_SCHEMA: number;
+export function fullDate(value: unknown): string | null;
+export function historicalCutoff(now?: number): string;
+export function registryFormat(value: unknown): string;
+export function registryInMedia(row: any, media?: string): boolean;
+export function publicUrl(value: unknown): string | null;
+export function buildHistoricalRegistry(args: any): any;
+export function registryCoverage(row: any): Record<string, boolean>;
+export function queryHistoricalRegistry(registry: any, args?: any, now?: number): any;
+export function planHistoricalEnrichment(registry: any, args?: any): any;
+export function compactRegistryCandidates(index: any, now?: number): any[];

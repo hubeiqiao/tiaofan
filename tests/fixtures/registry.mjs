@@ -1,0 +1,3 @@
+// Deterministic synthetic test-only scores; never served by the demo.
+const at='2026-10-01T00:00:00Z';
+export const registry={schemaVersion:1,revision:'synthetic-test-v1',generatedAt:at,sources:{'bangumi-archive':{at,url:'https://example.invalid/test-fixture'}},items:Array.from({length:600},(_,i)=>({bgm:900100001+i,key:'bgm:'+(900100001+i),title:'Fixture title '+(i+1),originalTitle:'Synthetic '+(i+1),aliases:[],date:'2020-01-01',format:'TV',sourceKey:'test',sourceAt:at,details:{summary:'Synthetic test-only prose.',ratings:{bgm:{score:8,count:2000,rank:i+1,at,url:'https://bgm.tv/subject/'+(900100001+i)}}}}))};

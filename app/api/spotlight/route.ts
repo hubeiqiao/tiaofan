@@ -1,0 +1,7 @@
+import {recommendationSeriesMembers} from '@/lib/recommendation-series';
+import {withTitle} from '@/lib/known-titles';
+import reviews from '@/data/reviews.json';
+import {buildSpotlight} from '@/lib/spotlight';
+import type {ReviewEvidence} from '@/lib/types';
+import {catalogKey,currentPeriods,DAY,safeSnapshot,snapshotInfo} from '@/lib/snapshots';
+export async function GET(req:Request){const u=new URL(req.url),p=currentPeriods().current,year=Number(u.searchParams.get('year')||p.year),quarter=Number(u.searchParams.get('quarter')??p.quarter);if(!Number.isInteger(year)||year<1970||year>2100||![0,1,2,3].includes(quarter))return Response.json({items:[],error:'季度不正确'},{status:400});const[catalog,discussion]=await Promise.all([safeSnapshot(catalogKey(year,quarter)),safeSnapshot('discussions')]);if(!catalog)return Response.json({items:[],state:'awaiting_snapshot'},{headers:{'Cache-Control':'no-store'}});const current=JSON.parse(catalog.payload),previous=catalog.previous_payload?JSON.parse(catalog.previous_payload):{items:[]};return Response.json({items:buildSpotlight(current.items.map(withTitle),previous.items.map(withTitle),discussion?JSON.parse(discussion.payload).items:[],reviews.items as Record<string,ReviewEvidence>,current.at,previous.at).map(item=>({...item,familyIds:recommendationSeriesMembers(item.bgm)})),cache:snapshotInfo(catalog),discussionCache:discussion?snapshotInfo(discussion,DAY):null,method:'评分与人数筛选配合已署名评论；变化只比较实际服务器快照；讨论仅指向原站。'},{headers:{'Cache-Control':'no-store'}})}

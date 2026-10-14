@@ -1,0 +1,9 @@
+'use client';
+import {MotionConfig} from 'motion/react';
+import {EditorialSelect} from '@/components/editorial-select';
+import {createContext,useContext,useEffect,useState,type ReactNode} from 'react';
+type Choice='system'|'light'|'dark';
+const Context=createContext<{choice:Choice;resolved:'light'|'dark';setChoice:(x:Choice)=>void}>({choice:'light',resolved:'light',setChoice:()=>{}});
+export function ThemeProvider({children}:{children:ReactNode}){const[choice,setValue]=useState<Choice>('light'),[systemDark,setSystemDark]=useState(false);useEffect(()=>{try{const s=localStorage.getItem('tiaofan-theme');if(s==='light'||s==='dark'||s==='system')setValue(s)}catch{}const q=matchMedia('(prefers-color-scheme: dark)');setSystemDark(q.matches);const listener=()=>setSystemDark(q.matches);q.addEventListener('change',listener);return()=>q.removeEventListener('change',listener)},[]);const resolved=choice==='system'?(systemDark?'dark':'light'):choice;useEffect(()=>{document.documentElement.dataset.theme=resolved;document.documentElement.style.colorScheme=resolved},[resolved]);function setChoice(s:Choice){setValue(s);try{localStorage.setItem('tiaofan-theme',s)}catch{}}return <MotionConfig reducedMotion="user"><Context.Provider value={{choice,resolved,setChoice}}>{children}</Context.Provider></MotionConfig>}
+export const useTheme=()=>useContext(Context);
+export function ThemeToggle({locale='zh'}:{locale?:'zh'|'en'|'ja'}){const{choice,setChoice}=useTheme();const names={zh:{label:'外观',system:'跟随系统',light:'浅色',dark:'深色'},en:{label:'Appearance',system:'System',light:'Light',dark:'Dark'},ja:{label:'外観',system:'システム設定',light:'ライト',dark:'ダーク'}}[locale];return <EditorialSelect className="theme-control" label={names.label} value={choice} onChange={value=>setChoice(value as Choice)} options={(['system','light','dark'] as const).map(value=>({value,label:names[value]}))}/>}

@@ -1,0 +1,1 @@
+ALTER TABLE `watchlist` ADD `favorite` integer DEFAULT 0 NOT NULL;

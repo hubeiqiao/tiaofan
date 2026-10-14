@@ -1,0 +1,9 @@
+.episode-update-cue{display:flex;align-items:center;justify-content:flex-start;gap:8px;min-height:44px;max-width:100%;margin:4px 0 0;padding:3px 0;border:0;background:none;color:var(--tf-action-text);font-size:12px;line-height:1.5;text-align:start}
+.episode-update-cue>span{display:flex;flex-wrap:wrap;gap:0 6px;min-width:0}
+.episode-update-cue strong{font-weight:600;white-space:nowrap}
+.episode-update-cue>svg{flex:none}
+.episode-update-cue:focus-visible{outline:3px solid var(--tf-focus);outline-offset:3px;border-radius:6px}
+.episode-update-cue:active{opacity:.7}
+.library-update-filter{font-size:13px!important;gap:6px!important;min-height:44px}
+.library-update-filter b{font-variant-numeric:tabular-nums}
+@media(hover:hover){.episode-update-cue:hover{text-decoration:underline;text-underline-offset:3px}}

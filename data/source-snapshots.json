@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-10-01T00:00:00.000Z",
+  "synthetic": true,
+  "snapshots": [
+    {
+      "key": "catalog:2026:3",
+      "payload": "{\"items\":[{\"key\":\"bgm:900000001\",\"bgm\":900000001,\"name\":\"示例：纸飞机观测站\",\"originalName\":\"デモ：紙飛行機観測所\",\"aliases\":[\"示例：纸飞机观测站\",\"Demo: Paper Plane Observatory\",\"デモ：紙飛行機観測所\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"日常\",\"科幻\"],\"date\":\"2026-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000002\",\"bgm\":900000002,\"name\":\"示例：月光修理部\",\"originalName\":\"デモ：月あかり工房\",\"aliases\":[\"示例：月光修理部\",\"Demo: Moonlight Workshop\",\"デモ：月あかり工房\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"奇幻\",\"治愈\"],\"date\":\"2026-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000003\",\"bgm\":900000003,\"name\":\"示例：没有地图的星期天\",\"originalName\":\"デモ：地図のない日曜日\",\"aliases\":[\"示例：没有地图的星期天\",\"Demo: Sunday Without a Map\",\"デモ：地図のない日曜日\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"冒险\",\"喜剧\"],\"date\":\"2026-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000004\",\"bgm\":900000004,\"name\":\"示例：玻璃花园短篇\",\"originalName\":\"デモ：ガラスの庭の短編\",\"aliases\":[\"示例：玻璃花园短篇\",\"Demo: Glass Garden Short\",\"デモ：ガラスの庭の短編\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"日常\"],\"date\":\"2026-10-01\",\"format\":\"movie\",\"rating\":{},\"episodes\":1,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true}],\"sourceTotal\":4,\"scope\":\"SYNTHETIC DEMO: fictional examples, no community ratings.\",\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    },
+    {
+      "key": "catalog:2026:2",
+      "payload": "{\"items\":[{\"key\":\"bgm:900000005\",\"bgm\":900000005,\"name\":\"示例：邮差与星河\",\"originalName\":\"デモ：星空の郵便\",\"aliases\":[\"示例：邮差与星河\",\"Demo: The Post and the Stars\",\"デモ：星空の郵便\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"冒险\",\"治愈\"],\"date\":\"2026-07-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true}],\"sourceTotal\":1,\"scope\":\"SYNTHETIC DEMO: fictional examples, no community ratings.\",\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    },
+    {
+      "key": "rank:bgm",
+      "payload": "{\"items\":[{\"key\":\"bgm:900000001\",\"bgm\":900000001,\"name\":\"示例：纸飞机观测站\",\"originalName\":\"デモ：紙飛行機観測所\",\"aliases\":[\"示例：纸飞机观测站\",\"Demo: Paper Plane Observatory\",\"デモ：紙飛行機観測所\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"日常\",\"科幻\"],\"date\":\"2026-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000002\",\"bgm\":900000002,\"name\":\"示例：月光修理部\",\"originalName\":\"デモ：月あかり工房\",\"aliases\":[\"示例：月光修理部\",\"Demo: Moonlight Workshop\",\"デモ：月あかり工房\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"奇幻\",\"治愈\"],\"date\":\"2026-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000003\",\"bgm\":900000003,\"name\":\"示例：没有地图的星期天\",\"originalName\":\"デモ：地図のない日曜日\",\"aliases\":[\"示例：没有地图的星期天\",\"Demo: Sunday Without a Map\",\"デモ：地図のない日曜日\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"冒险\",\"喜剧\"],\"date\":\"2026-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000004\",\"bgm\":900000004,\"name\":\"示例：玻璃花园短篇\",\"originalName\":\"デモ：ガラスの庭の短編\",\"aliases\":[\"示例：玻璃花园短篇\",\"Demo: Glass Garden Short\",\"デモ：ガラスの庭の短編\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"日常\"],\"date\":\"2026-10-01\",\"format\":\"movie\",\"rating\":{},\"episodes\":1,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000005\",\"bgm\":900000005,\"name\":\"示例：邮差与星河\",\"originalName\":\"デモ：星空の郵便\",\"aliases\":[\"示例：邮差与星河\",\"Demo: The Post and the Stars\",\"デモ：星空の郵便\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"冒险\",\"治愈\"],\"date\":\"2026-07-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},{\"key\":\"bgm:900000006\",\"bgm\":900000006,\"name\":\"示例：旧书店的午后\",\"originalName\":\"デモ：古本屋の午後\",\"aliases\":[\"示例：旧书店的午后\",\"Demo: An Afternoon in a Bookshop\",\"デモ：古本屋の午後\"],\"image\":\"/demo-poster.svg\",\"summary\":\"这是为界面测试创作的虚构资料，并非真实动画。日期、标签与集数均为示例；没有真实评分、评论或观看记录。\",\"tags\":[\"日常\",\"治愈\"],\"date\":\"2025-10-01\",\"format\":\"TV\",\"rating\":{},\"episodes\":12,\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true}],\"sourceTotal\":6,\"scope\":\"SYNTHETIC DEMO: fictional examples, no community ratings.\",\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    },
+    {
+      "key": "rank:kitsu",
+      "payload": "{\"items\":[],\"total\":0,\"hasNext\":false,\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    },
+    {
+      "key": "kitsu:seasonal",
+      "payload": "{\"byMal\":{},\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    },
+    {
+      "key": "metadata:seasonal",
+      "payload": "{\"items\":{\"900000001\":{\"name\":\"示例：纸飞机观测站\",\"type\":\"TV\",\"metadataDate\":\"2026-10-01\",\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},\"900000002\":{\"name\":\"示例：月光修理部\",\"type\":\"TV\",\"metadataDate\":\"2026-10-01\",\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},\"900000003\":{\"name\":\"示例：没有地图的星期天\",\"type\":\"TV\",\"metadataDate\":\"2026-10-01\",\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},\"900000004\":{\"name\":\"示例：玻璃花园短篇\",\"type\":\"movie\",\"metadataDate\":\"2026-10-01\",\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},\"900000005\":{\"name\":\"示例：邮差与星河\",\"type\":\"TV\",\"metadataDate\":\"2026-07-01\",\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true},\"900000006\":{\"name\":\"示例：旧书店的午后\",\"type\":\"TV\",\"metadataDate\":\"2025-10-01\",\"language\":\"ja\",\"streams\":[],\"sourceLinks\":[],\"synthetic\":true}},\"license\":\"UNLICENSED\",\"note\":\"Fictional examples authored for this source demo; not third-party catalog data.\",\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    },
+    {
+      "key": "discussions",
+      "payload": "{\"items\":[],\"scope\":\"No discussion samples in the demo.\",\"synthetic\":true,\"at\":\"2026-10-01T00:00:00.000Z\"}",
+      "previous_payload": null,
+      "source_url": "https://example.invalid/demo-data",
+      "updated_at": 1790812800000,
+      "attempted_at": 1790812800000,
+      "last_error": null
+    }
+  ],
+  "jobs": []
+}

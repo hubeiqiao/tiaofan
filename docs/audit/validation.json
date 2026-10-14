@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-14",
+  "scope": "Sanitized source edition; no production state or history",
+  "node": "24.19.0",
+  "cleanNpmCi": "pass",
+  "typecheck": "pass",
+  "unitTests": {
+    "passed": 123,
+    "failed": 0
+  },
+  "build": "pass",
+  "compiledCss": "pass",
+  "httpSmoke": {
+    "developmentPassed": 14,
+    "productionLocalPassed": 14
+  },
+  "productionDependencyAudit": {
+    "findings": 0,
+    "command": "npm audit --omit=dev",
+    "limitation": "Package classification, not complete runtime reachability"
+  },
+  "fullDependencyAudit": {
+    "critical": 0,
+    "high": 8,
+    "moderate": 4,
+    "total": 12,
+    "knownRoots": [
+      "braces@3.0.3",
+      "drizzle-kit nested esbuild@0.18.20"
+    ]
+  },
+  "lint": {
+    "errors": 263,
+    "warnings": 72,
+    "status": "unresolved inherited backlog"
+  },
+  "builtOutputPatternScan": {
+    "textFiles": 181,
+    "findings": [],
+    "limitation": "Targeted patterns only; not exhaustive secret/security proof"
+  },
+  "visualBrowserReview": "not performed on this source demo",
+  "githubCI": "Pending verification on uploaded commit; see GitHub Actions",
+  "publicRelease": "Public source review authorized by owner; code license decision pending",
+  "auditPolicyTests": {
+    "passed": 7,
+    "scope": "Reject new high/critical advisories across all dependency classes; allow only two documented package/advisory/severity combinations"
+  }
+}

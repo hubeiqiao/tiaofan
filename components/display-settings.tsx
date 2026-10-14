@@ -1,0 +1,19 @@
+'use client';
+import {useState,type ReactNode} from 'react';
+import {Popover} from '@heroui/react/popover';
+import {RadioGroup} from '@heroui/react/radio-group';
+import {Radio} from '@heroui/react/radio';
+import {Button} from '@heroui/react/button';
+import {Label} from '@heroui/react/label';
+import {Languages,Sun,Moon,Monitor,ChevronDown,Check,X,RefreshCw} from 'lucide-react';
+import {useLocale} from '@/lib/i18n';
+import {useTheme} from '@/components/theme-controls';
+
+/** One keyboard-accessible settings surface across desktop and touch layouts. */
+export function DisplaySettings({onRefresh,refreshDisabled=false,scheduleSettings}:{onRefresh?:()=>void;refreshDisabled?:boolean;scheduleSettings?:ReactNode}={}){
+ const {locale,setLocale}=useLocale();const{choice,setChoice}=useTheme();const[open,setOpen]=useState(false);
+ const labels={zh:{settings:'显示设置',language:'界面语言',appearance:'外观',close:'关闭设置',note:'语言选择会保留，下次访问继续使用。',system:'跟随系统',light:'浅色',dark:'深色'},en:{settings:'Display settings',language:'Language',appearance:'Appearance',close:'Close settings',note:'Your language choice is remembered for your next visit.',system:'System',light:'Light',dark:'Dark'},ja:{settings:'表示設定',language:'表示言語',appearance:'外観',close:'設定を閉じる',note:'選んだ言語は、次回のアクセスにも使われます。',system:'システム設定',light:'ライト',dark:'ダーク'}}[locale];
+ const settingsLabel=scheduleSettings?(locale==='ja'?'表示と放送予定の設定':locale==='en'?'Display and schedule settings':'显示与排期设置'):labels.settings;
+ const ThemeIcon=choice==='dark'?Moon:choice==='light'?Sun:Monitor;
+ return <Popover isOpen={open} onOpenChange={setOpen}><Button variant="outline" className="display-settings-trigger" aria-label={settingsLabel}><Languages size={17}/><span lang={locale==='zh'?'zh-Hans':locale}>{locale==='zh'?'中文':locale==='ja'?'日本語':'English'}</span><span className="settings-trigger-divider" aria-hidden="true"/><ThemeIcon size={17}/><ChevronDown size={13}/></Button><Popover.Content placement="bottom end" offset={12} containerPadding={16} className="display-settings-panel"><Popover.Dialog aria-label={settingsLabel}><div className="display-settings-heading"><Popover.Heading>{settingsLabel}</Popover.Heading><Button isIconOnly variant="ghost" className="utility-close" aria-label={labels.close} onPress={()=>setOpen(false)}><X size={18}/></Button></div><RadioGroup value={locale} onChange={value=>{if(value==='zh'||value==='en'||value==='ja')setLocale(value)}} aria-label={labels.language} className="display-settings-group"><Label>{labels.language}</Label>{([{value:'zh',label:'中文',lang:'zh-Hans'},{value:'en',label:'English',lang:'en'},{value:'ja',label:'日本語',lang:'ja'}] as const).map(item=><Radio key={item.value} value={item.value} className="display-settings-option"><Radio.Content><Label lang={item.lang}>{item.label}</Label><span className="display-settings-check" aria-hidden="true">{locale===item.value&&<Check size={16}/>}</span></Radio.Content></Radio>)}</RadioGroup><RadioGroup value={choice} onChange={value=>{if(value==='system'||value==='light'||value==='dark')setChoice(value)}} aria-label={labels.appearance} className="display-settings-group"><Label>{labels.appearance}</Label>{([{value:'system',Icon:Monitor},{value:'light',Icon:Sun},{value:'dark',Icon:Moon}] as const).map(({value,Icon})=><Radio key={value} value={value} className="display-settings-option"><Radio.Content><Icon size={17} aria-hidden="true"/><Label>{labels[value]}</Label><span className="display-settings-check" aria-hidden="true">{choice===value&&<Check size={16}/>}</span></Radio.Content></Radio>)}</RadioGroup>{scheduleSettings&&<div className="display-schedule-settings">{scheduleSettings}</div>}{onRefresh&&<Button variant="ghost" className="display-settings-refresh" isDisabled={refreshDisabled} onPress={onRefresh}><RefreshCw size={16}/>{locale==='ja'?'評価を更新':locale==='en'?'Refresh ratings':'刷新评分'}</Button>}<p className="display-settings-note">{labels.note}</p></Popover.Dialog></Popover.Content></Popover>;
+}

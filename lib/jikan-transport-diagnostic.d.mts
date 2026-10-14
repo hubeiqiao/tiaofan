@@ -1,0 +1,2 @@
+export function jikanTransportDiagnostic(error: unknown, url: string, state: {elapsedMs: number; clientAborted: boolean; timedOut: boolean}): Record<string, string|number|boolean|null>;
+export function emitJikanTransportDiagnostic(error: unknown, url: string, state: {elapsedMs: number; clientAborted: boolean; timedOut: boolean}, sink?: (event: Record<string,string|number|boolean|null>)=>void): void;

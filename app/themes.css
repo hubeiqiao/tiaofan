@@ -1,0 +1,132 @@
+/* Neutral palette and shared HeroUI/Tailwind bridges.
+   Visual ownership: gallery-shell.css for browsing, overlay-surfaces.css for reading. */
+:root,
+html[data-theme="light"] {
+  color-scheme: light;
+  --tf-canvas: #f5f5f7;
+  --tf-raised: #ffffff;
+  --tf-soft: #f5f5f5;
+  --tf-soft-strong: #eaeaea;
+  --tf-text: #1d1d1f;
+  --tf-muted: #515154;
+  --tf-line: #e5e5e5;
+  --tf-control-line: #8c8c8c;
+  --tf-action: #0071e3;
+  --tf-action-text: #0066cc;
+  --tf-action-ink: #fff;
+  --tf-marker: #e5e5e5;
+  --tf-marker-ink: #111111;
+  --tf-marker-text: #525252;
+  --tf-success: #366642;
+  --tf-danger: #b82722;
+  --tf-warning: #8a560b;
+  --tf-focus: #0071e3;
+  --tf-shadow: 0 14px 40px rgb(0 0 0 / 12%);
+  --tf-scrim: rgb(0 0 0 / 52%);
+  --tf-page-width: 1480px;
+  --tf-page-gutter: 24px;
+  --tf-radius: 14px;
+  --tf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans", "Yu Gothic", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --tf-canvas: #111111;
+  --tf-raised: #1c1c1c;
+  --tf-soft: #262626;
+  --tf-soft-strong: #333333;
+  --tf-text: #f5f5f5;
+  --tf-muted: #a3a3a3;
+  --tf-line: #333333;
+  --tf-control-line: #737373;
+  --tf-action: #0071e3;
+  --tf-action-text: #2997ff;
+  --tf-action-ink: #ffffff;
+  --tf-marker: #404040;
+  --tf-marker-ink: #ffffff;
+  --tf-marker-text: #d4d4d4;
+  --tf-success: #a8d58f;
+  --tf-danger: #ff9b87;
+  --tf-warning: #f4c76b;
+  --tf-focus: #ffffff;
+  --tf-shadow: 0 18px 50px rgb(0 0 0 / 36%);
+}
+
+/* HeroUI uses --muted for text. Legacy neutral surfaces use --secondary. */
+:root,
+html[data-theme] {
+  --tf-bg: var(--tf-canvas);
+  --tf-ink: var(--tf-text);
+  --background: var(--tf-canvas);
+  --foreground: var(--tf-text);
+  --surface: var(--tf-raised);
+  --surface-foreground: var(--tf-text);
+  --surface-secondary: var(--tf-soft);
+  --surface-secondary-foreground: var(--tf-text);
+  --surface-tertiary: var(--tf-soft-strong);
+  --surface-tertiary-foreground: var(--tf-text);
+  --surface-hover: color-mix(in srgb, var(--tf-raised) 92%, var(--tf-text) 8%);
+  --overlay: var(--tf-raised);
+  --overlay-foreground: var(--tf-text);
+  --muted: var(--tf-muted);
+  --default: var(--tf-soft);
+  --default-foreground: var(--tf-text);
+  --accent: var(--tf-action);
+  --accent-foreground: var(--tf-action-ink);
+  --field-background: var(--tf-raised);
+  --field-foreground: var(--tf-text);
+  --field-placeholder: var(--tf-muted);
+  --field-border: var(--tf-control-line);
+  --field-border-width: 1px;
+  --field-hover: var(--tf-soft);
+  --field-focus: var(--tf-raised);
+  --field-border-hover: var(--tf-text);
+  --field-border-focus: var(--tf-focus);
+  --border: var(--tf-line);
+  --separator: var(--tf-line);
+  --focus: var(--tf-focus);
+  --link: var(--tf-text);
+  --backdrop: var(--tf-scrim);
+  --radius: var(--tf-radius);
+  --field-radius: var(--tf-radius);
+  --surface-shadow: none;
+  --field-shadow: none;
+  --overlay-shadow: var(--tf-shadow);
+  --segment: var(--tf-soft);
+  --segment-foreground: var(--tf-text);
+  --success: var(--tf-success);
+  --success-foreground: var(--tf-raised);
+  --danger: var(--tf-danger);
+  --danger-foreground: var(--tf-raised);
+  --warning: var(--tf-warning);
+  --warning-foreground: var(--tf-raised);
+  --card: var(--tf-raised);
+  --card-foreground: var(--tf-text);
+  --popover: var(--tf-raised);
+  --popover-foreground: var(--tf-text);
+  --primary: var(--tf-action);
+  --primary-foreground: var(--tf-action-ink);
+  --secondary: var(--tf-soft);
+  --secondary-foreground: var(--tf-text);
+  --muted-foreground: var(--tf-muted);
+  --destructive: var(--tf-danger);
+  --input: var(--tf-control-line);
+  --ring: var(--tf-focus);
+  --surface-raised: var(--tf-raised);
+  --ink: var(--tf-text);
+  --ink-muted: var(--tf-muted);
+  --line: var(--tf-line);
+  --action: var(--tf-action);
+  --scrollbar-thumb: var(--tf-control-line);
+  --scrollbar-track: transparent;
+  --scrollbar-width: thin;
+}
+
+/* Shared status, generic selection, and system accessibility preferences. */
+@media (prefers-reduced-motion: reduce) {
+  :root { --skeleton-animation: none; }
+}
+
+/* Standalone state controls. */
+
+/* Settings trigger and generic HeroUI controls. Panel lives in overlay-surfaces.css. */
