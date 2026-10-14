@@ -1,77 +1,76 @@
-# 挑番 · Tiaofan
+<h1 align="center">挑番 · Tiaofan</h1>
 
-**中文 · English · 日本語的动画发现界面。**
+<p align="center"><strong>更清楚地找到下一部想看的动画。</strong><br>分季发现、来源明确的作品信息，以及随手可用的追番体验。</p>
 
-挑番把分季浏览、评分来源、作品详情、系列关系和追番交互放在同一个界面。本仓库是从线上产品整理出的独立源码示例，使用合成目录与中性占位图，供查看与审阅；二次开发和自部署的授权范围以所有者后续选择的代码许可证为准。
+<p align="center">
+  <a href="https://anime.hubeiqiao.com"><strong>体验线上产品 →</strong></a>
+  · <a href="#本地运行">本地运行</a>
+  · <a href="docs/DEPLOYMENT.md">开发文档</a>
+  · <a href="README.md">English</a>
+</p>
 
-[English](README.md) · [线上产品](https://anime.hubeiqiao.com) · [数据与素材边界](docs/DATA_SOURCES.md) · [安全说明](SECURITY.md)
+<p align="center"><a href="https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml"><img src="https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml/badge.svg?branch=main" alt="源码检查工作流状态"></a></p>
 
-> 源码已公开供审阅，项目代码许可证仍等待所有者确认，当前未授予通用开源许可。第三方软件继续适用其原有许可证。详见 [LICENSE-STATUS.md](LICENSE-STATUS.md)。
+<p align="center">整个网站通过 <strong>GPT Sites</strong> 构建，经历了多轮提示、实现、测试与迭代。<br><a href="docs/BUILT_WITH_GPT_SITES.md">了解构建过程</a></p>
 
-已通过 123 项测试、类型检查与构建。仍有已披露的 lint 清理项和两个开发工具安全公告，详见 [检查结果](docs/RELEASE_REVIEW.md)。
+<p align="center">
+  <a href="docs/screenshots/desktop-catalog-en.jpg"><img src="docs/screenshots/desktop-catalog-en.jpg" width="62%" alt="线上产品英文桌面目录，包含分季导航和来源筛选"></a>
+  &nbsp;
+  <a href="docs/screenshots/narrow-catalog-en.jpg"><img src="docs/screenshots/narrow-catalog-en.jpg" width="26%" alt="真实窄浏览器窗口中的响应式双列目录"></a>
+</p>
 
-## 界面预览
+<p align="center"><sub>线上产品实拍 · 2026 年 10 月 · <a href="docs/screenshots/README.md">截图来源与素材权利</a><br>仓库示例使用虚构作品；窄屏图来自实际浏览器窗口，不代表真机测试。</sub></p>
 
-![线上产品英文桌面目录](docs/screenshots/desktop-catalog-en.jpg)
+## 发现作品，也了解依据
 
-<img src="docs/screenshots/narrow-catalog-en.jpg" width="360" alt="线上产品在真实窄浏览器窗口中的双列响应式目录">
-
-截图拍摄于 2026 年 10 月 14 日，展示的是线上产品，不是仓库内的合成数据示例。窄屏图来自实际调整浏览器窗口后的响应式渲染，不代表真机测试。截图中的第三方素材与数据不属于代码许可。[截图来源与权利说明](docs/screenshots/README.md)。
-
-## 使用 GPT Sites 构建
-
-整个网站通过 GPT Sites 完成，经历了多轮提示、实现、测试与迭代。这里并不是“一次提示就完成全部产品”的说法，也不代表 OpenAI 官方项目或背书。详见 [构建说明](docs/BUILT_WITH_GPT_SITES.md)。
-
-## 有什么
-
-- 中文、英文与日文界面及独立语言路由
-- 动画目录、筛选排序、卡片/列表视图与作品详情
-- 移动端适配、浅色/深色主题及无障碍降级
-- 可复用的来源证据、系列关系与观看状态组件
-- 公开查询与 MCP 接口的源码结构
-- 数据适配器和测试，便于替换成你有权使用的数据
-
-## 示例与线上站点的区别
-
-本仓库不是生产站点的数据备份。所有示例作品、目录与日期均为合成测试材料，不能当作真实推荐或播放信息。生产海报原图、评论摘录、观看记录、个人头像、角色衍生宣传图及运行配置没有打包。文档中的两张线上界面截图是明确例外，其中附带展示的第三方海报、标识与数据不属于代码许可。
-
-生产站点的登录由托管平台提供。本示例默认关闭登录、私人片单写入及 AI 服务，不信任请求方传入的身份头。接入你自己的认证、数据库或模型之前，请阅读 [部署说明](docs/DEPLOYMENT.md)。
+- **按季选片。** 浏览当季与上一季目录，筛选作品，在卡片与列表视图间切换。
+- **看清信息来源。** 作品详情、评分与观看证据保留来源上下文。
+- **接着看下一部。** 在线上产品中探索系列关系、发现推荐并管理观看状态。
+- **用熟悉的语言阅读。** 中文、英文和日文界面，适配不同屏幕，支持浅色与深色主题。
 
 ## 本地运行
 
-建议 Node.js 24 与 npm（本次验证为 Node.js 24.19.0）；包声明的最低版本为 22.13，未单独验证所有旧版本。保留 package-lock.json。
+使用 **Node.js 24** 与 npm。
 
 ```sh
+git clone https://github.com/hubeiqiao/tiaofan.git
+cd tiaofan
 npm ci
 npm run dev
 ```
 
-按终端提示打开本地地址。首次启动会准备所需的合成运行时数据；不需要生产 API key、Cloudflare 登录或原站点账户。
+打开 **http://127.0.0.1:5173**。独立示例包含六部虚构作品与中性占位图，不需要生产凭据。登录、私人片单持久化和 AI 服务默认关闭。[接入自己的服务 →](docs/DEPLOYMENT.md)
+
+## 项目结构
+
+界面基于 **React + TypeScript**，应用运行时使用 **Vinext + Vite**，本地构建与部署集成采用 **Cloudflare Workers** 工具链。目录标准化、来源适配、导航与观看状态逻辑位于可复用的领域层。
+
+| 目录 | 内容 |
+| --- | --- |
+| `app/`、`components/`、`hooks/` | 页面、HTTP/MCP 路由与交互界面 |
+| `lib/`、`data/` | 领域逻辑、来源适配器与合成示例数据 |
+| `scripts/`、`tests/` | 数据准备、回归测试与发布检查 |
+| `docs/` | 开发部署、来源与维护说明 |
+
+## 开发检查
 
 ```sh
 npm run typecheck
 npm test
 npm run build
+npm start
 ```
 
-测试命令与范围以 package.json 为准。发布时实际执行的检查记录见 [发布清单](docs/RELEASE_CHECKLIST.md)。本地开发与构建成功不代表已经配置好生产登录或数据授权。
+源码测试包含 **123 项自动化测试**。最新结果见 [GitHub 工作流](https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml)。测试范围、既有 lint 待清理项及两个有明确例外范围的开发工具安全公告见 [检查记录](docs/RELEASE_REVIEW.md)。
 
-## 目录
+## 文档与参与
 
-- app/：页面与服务端路由
-- components/、hooks/：交互界面和状态逻辑
-- lib/：领域逻辑、数据转换与来源适配器
-- data/：合成演示数据与界面翻译
-- scripts/：数据准备、验证和维护脚本
-- tests/：可复用回归测试
-- public/：可分发的占位图及保留的许可证文件
+[部署说明](docs/DEPLOYMENT.md) · [数据来源](docs/DATA_SOURCES.md) · [GPT Sites 构建过程](docs/BUILT_WITH_GPT_SITES.md) · [参与贡献](CONTRIBUTING.md) · [安全说明](SECURITY.md)
 
-## 数据、图片和许可
+欢迎反馈问题和提出具体改进。提交前请阅读贡献指南，不要在公开反馈中包含私人数据。
 
-代码许可与数据许可是两回事。Bangumi wiki 元数据、bangumi-data、Wikidata、Kitsu、Jikan/MAL、IMDb，以及作品海报和用户评论，各自有独立的使用条件。公开可读的 API 也不等于允许重新分发全部内容。
+## 许可与内容
 
-本仓库不授予动画角色、海报、商标、评论、生产数据或第三方服务的权利。依赖及保留的第三方源码说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。自行接入数据时保留出处、日期、许可、修改记录，并遵守访问频率限制。不要把私有片单、凭据或账号标识提交到 Git。
+**源码公开，代码许可证待确认。** 二次开发、自部署等复用授权以所有者后续选择的许可证为准。第三方组件与截图素材适用各自的权利条件。仓库不包含生产数据集和私人账户数据。[许可状态](LICENSE-STATUS.md) · [第三方说明](THIRD_PARTY_NOTICES.md)
 
-## 参与
-
-欢迎报告问题和提出改进建议。提交前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。安全问题请按 [SECURITY.md](SECURITY.md) 私下报告，不要在公开 issue 中粘贴凭据或私人数据。
+<p align="center">由 <a href="https://github.com/hubeiqiao">hubeiqiao</a> 使用 GPT Sites 创建。</p>

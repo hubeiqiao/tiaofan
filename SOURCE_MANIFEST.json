@@ -3,7 +3,7 @@
   "upstreamSourceCommit": "78001438c11514d51a50c74be0ff75a61b335e74",
   "sourceEdition": "Synthetic standalone demo, authentication and private services disabled",
   "fileCount": 392,
-  "totalBytes": 2627018,
+  "totalBytes": 2624439,
   "files": [
     {
       "path": ".env.example",
@@ -67,13 +67,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6363,
-      "sha256": "c91fbb0208f55ff29672d1b9ac7521fb9d8e5090868b8545cea0cf876411e5a7"
+      "bytes": 4361,
+      "sha256": "0e786199d8a39cc57eec9afbe54b57811437fe493d56f35956f1a6563153a50b"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 4659,
-      "sha256": "082088d6c6bcc9300856f9385e5a913af4a333693416e08f83fb3ebf663e8bf1"
+      "bytes": 4082,
+      "sha256": "325d00fb940d891b3e16b76e32b41fb470dbb8d801613e1fb5b04a7ef6574181"
     },
     {
       "path": "SECURITY.md",
