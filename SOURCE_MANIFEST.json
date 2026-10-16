@@ -1,9 +1,9 @@
 {
   "scope": "Explicit source-only export, excluding this self-describing manifest",
-  "upstreamSourceCommit": "c4f48512dff570a6981ccd569c52565bb5d39ed2",
+  "upstreamSourceCommit": "5f0de66ed7c8c4df436d6940bbea4bbd155461ef",
   "sourceEdition": "Synthetic standalone demo, authentication and private services disabled",
   "fileCount": 410,
-  "totalBytes": 2725853,
+  "totalBytes": 2727424,
   "files": [
     {
       "path": ".env.example",
@@ -1072,8 +1072,8 @@
     },
     {
       "path": "docs/RELEASE_REVIEW.md",
-      "bytes": 8334,
-      "sha256": "f74f8e3b74faa3e4a41c362b1fec49adac976523c3c7f4aac73817898b74d724"
+      "bytes": 9905,
+      "sha256": "3535cb2d028c4b407b2d2ef4e9ae87c802e7bafb8ef2b542b9cd3ba52d69ef7a"
     },
     {
       "path": "docs/REPOSITORY_SETUP.md",
@@ -2059,22 +2059,28 @@
   "sourceSync": {
     "publicBaseCommit": "75a0c16aaa9ddb9a1936d454bd552a49eb1d5b57",
     "date": "2026-10-16",
-    "scope": "v107 source-base delta plus pending reviewed exact-resource code patch; production deployment and runtime datasets are separate.",
+    "scope": "Public-safe adaptation of the v107 source-base delta and reviewed exact-resource patch incorporated into canonical v108; production runtime datasets remain excluded.",
     "syntheticDataPreserved": true,
     "privateServicesDisabled": true,
-    "state": "reviewed-local-not-deployed",
-    "pendingPatchInventorySha256": "c103ff0e30b984e2eb4e2b582bc306d65d0dfd79fb9ade285dcd87196f680480",
-    "pendingPatchInventoryFileCount": 21,
-    "pendingPatchInventoryFormat": "SHA-256 of the verified canonical review files array encoded using json.dumps(files, separators=(',', ':'), sort_keys=True)."
+    "state": "canonical-deployed-and-accepted",
+    "reviewedPatchInventorySha256": "c103ff0e30b984e2eb4e2b582bc306d65d0dfd79fb9ade285dcd87196f680480",
+    "reviewedPatchInventoryFileCount": 21,
+    "reviewedPatchInventoryFormat": "SHA-256 of the verified canonical review files array encoded using json.dumps(files, separators=(',', ':'), sort_keys=True).",
+    "historicalUpstreamSourceCommit": "c4f48512dff570a6981ccd569c52565bb5d39ed2",
+    "canonicalVersion": 108,
+    "canonicalPublishedAt": "2026-10-16T17:44:31.740128Z",
+    "hostedAcceptedAt": "2026-10-16T18:04:40.362941Z",
+    "publicSourceCommit": "aedf6e044939401556e9c8717f80799f4f2fca8f"
   },
   "compatibilityTestFollowup": {
     "publicBaseCommit": "aedf6e044939401556e9c8717f80799f4f2fca8f",
     "date": "2026-10-16",
     "scope": "Test-only public source compatibility regressions with fictional injected fixtures; documentation and source inventory updated.",
-    "state": "reviewed-test-only",
+    "state": "published-test-only",
     "runtimeCodeUnchanged": true,
     "syntheticDataPreserved": true,
     "privateServicesDisabled": true,
-    "gatewayPolicyIncluded": false
+    "gatewayPolicyIncluded": false,
+    "publicCommit": "0d5effbc9f19ea8bfd10c2e70cb6190ef8f2263f"
   }
 }
