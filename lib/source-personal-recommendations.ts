@@ -6,7 +6,7 @@ import {dateStatus,inCatalogSeason,inDiscovery,inMedia} from './catalog';
 import {inHistorical} from './historical-catalog';
 import {preferenceConstraints} from './preference-constraints';
 import {sharedSourceTags,sharedTagEvidence} from './source-tag-evidence';
-import {japaneseLanguageEligible,recommendationEntryStatus,recommendationSeriesKey,savedSeriesKeys} from './recommendation-series';
+import {japaneseLanguageEligible,recommendationEntryStatus,recommendationSeriesKey,recommendationSeriesMembers,savedSeriesKeys} from './recommendation-series';
 
 const generic=new Set(['战斗','冒险','剧情','青春','友情']);
 export function meaningfulSharedTags(seed:Anime,candidate:Anime):string[]{const tags=sharedSourceTags(seed,candidate);return tags.length>=2&&tags.some(tag=>!generic.has(tag))?tags:[]}
@@ -46,5 +46,7 @@ export function prepareSourcePersonal(args:PersonalArgs,saved:SavedSignal[],snap
  const distinct=(rows:Anime[])=>{const groups=new Set<number>();return rows.filter(a=>{const group=recommendationSeriesKey(a.bgm!);if(groups.has(group))return false;groups.add(group);return true}).slice(0,6)};
  const chosen=distinct(ranked.map(x=>x.anime)),items=chosen.map(a=>({bgm:a.bgm!,entryStatus:recommendationEntryStatus(a.bgm!),evidence:ranked.find(x=>x.anime.bgm===a.bgm)!.evidence.slice(0,3)}));
  const discoveryCandidates=distinct([...candidates].sort((a,b)=>rank(b)-rank(a)||a.bgm!-b.bgm!));
- return{items,candidates:chosen,discoveryCandidates,candidatePoolCount:candidates.length,preselectedCount:chosen.length,sourceAt:new Date(selected.updatedAt).toISOString(),profileSourceAt:new Date(Math.min(...Object.values(snapshots).filter(Boolean).map(s=>s!.updatedAt))).toISOString(),profileUpdatedAt:saved.length?new Date(Math.max(...saved.map(r=>r.updated_at))).toISOString():null,profileSummary:{seedTitles:signals.map(({anime,row})=>({key:anime.key,title:anime.name,state:row.state,favorite:row.favorite===1})),matchedCount:resolved.length,unmatchedCount:saved.length-resolved.length,coldStart:signals.length===0},constraints:c};
+ // A few public family aliases let the open screen remove a newly saved series immediately.
+ const withFamily=(row:Anime):Anime=>{const members=new Set(recommendationSeriesMembers(row.bgm!));return {...row,recommendationFamilyKeys:[...new Set([...members].map(id=>`bgm:${id}`).concat(all.filter(a=>a.bgm&&members.has(a.bgm)).flatMap(aliases)))]}};
+ return{items,candidates:chosen.map(withFamily),discoveryCandidates:discoveryCandidates.map(withFamily),candidatePoolCount:candidates.length,preselectedCount:chosen.length,sourceAt:new Date(selected.updatedAt).toISOString(),profileSourceAt:new Date(Math.min(...Object.values(snapshots).filter(Boolean).map(s=>s!.updatedAt))).toISOString(),profileUpdatedAt:saved.length?new Date(Math.max(...saved.map(r=>r.updated_at))).toISOString():null,profileSummary:{seedTitles:signals.map(({anime,row})=>({key:anime.key,title:anime.name,state:row.state,favorite:row.favorite===1})),matchedCount:resolved.length,unmatchedCount:saved.length-resolved.length,coldStart:signals.length===0},constraints:c};
 }

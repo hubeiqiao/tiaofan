@@ -15,3 +15,7 @@ Source adapters may remain as implementation examples. Their presence does not g
 - **Other catalogs, reviews and viewing providers:** links do not prove a title is currently available, licensed or playable in a region. No real production playback inventory or reviewer material is supplied with the demo.
 
 Do not add production data by copying generated TypeScript shards or test fixtures. Regenerate runtime modules only from approved input. Do not export private watchlists, account IDs, credentials or runtime databases. A new public dataset, poster collection or binary release needs its own rights review.
+
+## Curated links and exact-part numbering
+
+The source includes reconciliation code for reviewed exact-identity platform links and part-relative episode scopes. Both runtime input files are empty in the demo and reset by data preparation. Tests inject fictional records rather than production inventories or real title offers. Deployment-specific curated data is intentionally omitted; see [exact resource matching](exact-resource-matches.md).

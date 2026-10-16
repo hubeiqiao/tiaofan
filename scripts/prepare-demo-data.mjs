@@ -34,6 +34,8 @@ for(const name of ['archived-homepages','japanese-coverage-reasons','japanese-so
 for(const name of ['anime-relations','recommendation-relation-evidence'])write(name,{scope:'Synthetic demo; no real relation evidence bundled.',items:[]});
 write('recommendation-entry-evidence',{schemaVersion:1,scope:'No verified entry evidence in the demo.',items:[]});
 write('watch-sources',{version:1,scope:'No live providers configured in this demo.',sources:[]});
+write('curated-platforms',{version:1,policy:'Synthetic standalone demo; reviewed production platform links are deployment-specific and not bundled.',items:{},links:[]});
+write('watch-part-scopes',{});
 write('watch-listings',{version:1,generatedAt:at,synthetic:true,items:{},titleProgress:{},lastAutomaticSweep:null});
 const pack=(key,payload)=>({key,payload:JSON.stringify({...payload,synthetic:true,at}),previous_payload:null,source_url:meta.sourceUrl,updated_at:stamp,attempted_at:stamp,last_error:null});
 const prev=new Date(Date.UTC(year,(quarter-1)*3,1));

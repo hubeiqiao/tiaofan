@@ -61,7 +61,7 @@ npm run build
 npm start
 ```
 
-源码测试包含 **123 项自动化测试**。最新结果见 [GitHub 工作流](https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml)。测试范围、既有 lint 待清理项及两个有明确例外范围的开发工具安全公告见 [检查记录](docs/RELEASE_REVIEW.md)。
+源码测试包含自动化回归测试和演示边界检查。最新结果见 [GitHub 工作流](https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml)。测试范围、既有 lint 待清理项及两个有明确例外范围的开发工具安全公告见 [检查记录](docs/RELEASE_REVIEW.md)。
 
 ## 文档与参与
 

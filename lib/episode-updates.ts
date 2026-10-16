@@ -14,9 +14,9 @@ export function recentEpisodeAdvance(listings:readonly WatchListing[]|null|undef
   if(!event||event.verificationScope!=='integer-episode-advance'||!Number.isSafeInteger(event.bgm)||event.bgm<=0||event.sourceId!==listing.id||!positiveEpisode(event.episode)||!positiveEpisode(event.previousEpisode)||event.episode<=event.previousEpisode)continue;
   const observed=typeof event.observedAt==='string'?Date.parse(event.observedAt):NaN;
   const checked=listing.listingCheckedAt?Date.parse(listing.listingCheckedAt):NaN;
-  const latest=integerLabel(listing.latestEpisode);
+  const latest=listing.latestPartEpisode ?? integerLabel(listing.latestEpisode);
   if(!Number.isFinite(observed)||observed>now||now-observed>=SEVEN_DAYS||!Number.isFinite(checked)||checked<observed||checked>now||latest===null||latest<event.episode||listing.verificationScope!=='provider-episode-listing'||!['native-browser','public-html'].includes(listing.observationMethod||''))continue;
-  if(!Array.isArray(listing.episodes)||!listing.episodes.length||listing.episodes.some((item:WatchListing['episodes'][number])=>integerLabel(item.label)===null)||Math.max(...listing.episodes.map((item:WatchListing['episodes'][number])=>integerLabel(item.label)!))!==latest)continue;
+  if(!Array.isArray(listing.episodes)||!listing.episodes.length||listing.episodes.some((item:WatchListing['episodes'][number])=>integerLabel(item.label)===null)||Math.max(...listing.episodes.map((item:WatchListing['episodes'][number])=>(item.partEpisode ?? integerLabel(item.label)!)))!==latest)continue;
   found.push(event);
  }
  if(!found.length||new Set(found.map(event=>event.bgm)).size!==1)return null;

@@ -1,3 +1,4 @@
+import platformNotes from '@/data/platform-source-notes.json';
 import englishExtra from '@/data/english-ui-extra.json';
 import japanese from '@/data/japanese-ui.json';
 import coverageReasons from '@/data/japanese-coverage-reasons.json';
@@ -413,7 +414,7 @@ export const english = {
 export type Locale='zh'|'en'|'ja';
 export type TranslationKey=string;
 export type Translator=(key:string)=>string;
-export const knownDictionary: Record<string,Record<string,string>>={zh:{},en:{...english,...englishExtra},ja:{...japanese,...sourceNotes,...coverageReasons}};
+export const knownDictionary: Record<string,Record<string,string>>={zh:{},en:{...english,...englishExtra,...platformNotes.en},ja:{...japanese,...sourceNotes,...coverageReasons,...platformNotes.ja}};
 const reverseEnglish=new Map<string,string>();for(const [key,value] of Object.entries(knownDictionary.en)){if(!reverseEnglish.has(value))reverseEnglish.set(value,key)}
 export function translate(locale:Locale,key:string){return locale==='zh'?key:knownDictionary[locale][key]||key}
 export function translateKnownText(locale:Locale,value:string){const trimmed=value.trim(),key=reverseEnglish.get(trimmed)||trimmed; const translated=locale==='zh'?key:knownDictionary[locale][key];return translated?value.replace(trimmed,translated):value}

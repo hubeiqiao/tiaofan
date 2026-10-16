@@ -63,7 +63,7 @@ npm run build
 npm start
 ```
 
-The source suite includes **123 automated tests**. See the [GitHub workflow](https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml) for current results, and the [release review](docs/RELEASE_REVIEW.md) for test scope, the inherited lint backlog and two narrowly accepted development-tool advisories.
+The source suite includes automated regression and demo-boundary tests. See the [GitHub workflow](https://github.com/hubeiqiao/tiaofan/actions/workflows/ci.yml) for current results, and the [release review](docs/RELEASE_REVIEW.md) for test scope, the inherited lint backlog and two narrowly accepted development-tool advisories.
 
 ## Documentation & contributing
 

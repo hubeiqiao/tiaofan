@@ -1,0 +1,18 @@
+{
+  "en": {
+    "示例平台作品资料；播放、地区和权益未核验。": "Synthetic platform title information; playback, region and entitlement are unverified.",
+    "复核已到期，仅保留历史作品资料；当前上线与可用性待重新确认。": "Review is overdue; retained as historical title information only. Current availability needs a new check.",
+    "示例平台作品资料；播放、地区和权益未核验。 复核已到期，仅保留历史作品资料；当前上线与可用性待重新确认。": "Synthetic platform title information; playback, region and entitlement are unverified. Review is overdue; retained as historical title information only. Current availability needs a new check.",
+    "示例分篇目录；源站12–19集对应本篇1–8集。": "Synthetic part directory; provider episodes 12–19 map to part episodes 1–8.",
+    "第四季整体作品页 · 请在平台内选择夺还篇（源站12–19集）": "Whole fourth-season page · Select the Recapture Arc (provider episodes 12–19)",
+    "系列整体页面 · 请在平台内选择第二、第三赛段": "Series-wide page · Select the second and third stages"
+  },
+  "ja": {
+    "示例平台作品资料；播放、地区和权益未核验。": "架空の配信元作品資料です。再生・地域・視聴権は未確認です。",
+    "复核已到期，仅保留历史作品资料；当前上线与可用性待重新确认。": "再確認期限を過ぎたため、過去の作品資料としてのみ表示しています。現在の配信状況は再確認が必要です。",
+    "示例平台作品资料；播放、地区和权益未核验。 复核已到期，仅保留历史作品资料；当前上线与可用性待重新确认。": "架空の配信元作品資料です。再生・地域・視聴権は未確認です。再確認期限を過ぎたため、過去の作品資料としてのみ表示しています。現在の配信状況は再確認が必要です。",
+    "示例分篇目录；源站12–19集对应本篇1–8集。": "架空の分篇一覧です。配信元の第12〜19話は本編内の第1〜8話に対応します。",
+    "第四季整体作品页 · 请在平台内选择夺还篇（源站12–19集）": "第4期全体の作品ページ · 奪還編（配信元の第12〜19話）を選択してください",
+    "系列整体页面 · 请在平台内选择第二、第三赛段": "シリーズ全体のページ · 第2・第3ステージを選択してください"
+  }
+}

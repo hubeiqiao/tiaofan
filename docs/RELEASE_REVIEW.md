@@ -42,3 +42,13 @@ The final build-output pattern scan inspected 181 text files and found no exclud
 ESLint did not pass: 263 errors and 72 warnings remain in inherited code and test conventions. They are not hidden with blanket rule disables. CI exposes lint as a non-blocking diagnostic backlog; typecheck, tests and build remain required. The source snapshot must not be described as passing every quality check or as deployment-ready.
 
 These results must be rerun after dependency or source changes. Local validation is complete as recorded above. GitHub CI and remote verification are tracked on the uploaded commit; no remote pass is implied by these local results.
+
+## October 16 source synchronization
+
+This source-only adaptation includes recommendation-card retention, header alignment, exact-part episode numbering and reviewed-platform reconciliation. Production datasets and hosting history remain excluded. Curated runtime links and part scopes default to empty input; new tests inject fictional records. Public demo identity, storage, AI and live-provider restrictions remain in place.
+
+Local verification on 2026-10-16 with Node.js 24.19.0: clean `npm ci`, source hygiene, TypeScript, all 166 automated tests, production build/CSS checks and all 14 HTTP checks on both development and built-local Worker servers passed. A bounded compiled-output scan inspected 174 text files with no supported credential, private-reference, hosting-project, production-origin or excluded-art-path matches. These checks are not exhaustive security or rights clearance.
+
+The production-classified dependency audit still reports zero findings. The full dependency gate accepts only the existing documented braces/esbuild advisory exceptions: 12 affected package entries, including 8 high, 4 moderate and no critical entries. Package and lockfile versions were not changed in this synchronization.
+
+ESLint remains a non-blocking diagnostic failure: the staged run reports 262 errors and 77 warnings. The new platform helper uses `unknown` rather than untyped index signatures. Two necessary CommonJS imports have documented next-line module-format exceptions; no blanket rule suppression was added. This local record does not claim the source is deployment-ready or that remote CI has passed for a new commit.

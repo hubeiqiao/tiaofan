@@ -1,3 +1,4 @@
+import {partScope,partEpisode,scopedRecord,scopedProgress} from './episode-scope.cjs';
 import registry from '@/data/watch-sources.json';
 import listingData from '@/data/watch-listings.json';
 import type {WatchListing} from './types';
@@ -21,13 +22,15 @@ function automaticQueue(now:number) {
     (a.priority || 0) - (b.priority || 0) || a.id.localeCompare(b.id));
 }
 function project(source:Source, now:number, queue:Source[]):WatchListing {
-  const row = records[source.id], at = row?.lastSuccessAt || null, eligible = eligibility(source, now);
+  const row = scopedRecord(source,records[source.id]) as ListingRecord | undefined, at = row?.lastSuccessAt || null, eligible = eligibility(source, now);
+  const scope = partScope(source);
   const age = at ? Math.max(0, now - Date.parse(at)) : null;
   const position = queue.findIndex(target => target.id === source.id);
   const result:WatchListing = {
     id:source.id,provider:source.provider,sourceUrl:source.url,sourceTitle:source.expectedTitle,
     latestEpisode:row?.latestEpisode || null,latestUrl:row?.latestUrl || null,
-    episodes:(row?.episodes || []).map(episode => ({label:episode.label,url:episode.url,...(episode.publishedAt ? {publishedAt:episode.publishedAt} : {})})),
+    episodes:(row?.episodes || []).map(episode => ({label:episode.label,url:episode.url,...(scope ? {partEpisode:partEpisode(source,episode.label)!} : {}),...(episode.publishedAt ? {publishedAt:episode.publishedAt} : {})})),
+    ...(scope ? {latestPartEpisode:row?.latestEpisode ? partEpisode(source,row.latestEpisode) : null,partEpisodeCount:scope.last-scope.first+1,partScopeNote:scope.note} : {}),
     listingCheckedAt:at,lastAttemptAt:row?.attemptedAt || null,
     listingAgeHours:age === null ? null : Math.round(age / 360_000) / 10,
     stale:age === null || age > SIX_HOURS,status:row?.status || 'awaiting_check',error:row?.errorCode || null,
@@ -38,7 +41,7 @@ function project(source:Source, now:number, queue:Source[]):WatchListing {
     automaticQueuePosition:position < 0 ? null : position + 1,
     verificationScope:'provider-episode-listing',observationMethod:row?.observationMethod || null,
   };
-  const progress = titleProgress[String(source.bgm)], event = progress?.advance;
+  const progress = scopedProgress(source,titleProgress[String(source.bgm)]), event = progress?.advance;
   // Only a receipt from this exact, registered title/provider may leave the
   // public snapshot. Existing listings without advancement history stay neutral.
   if (event && row?.id === source.id && row.bgm === source.bgm && row.sourceUrl === source.url && row.sourceTitle === source.expectedTitle && row.verificationScope === 'provider-episode-listing' && event.bgm === source.bgm && event.sourceId === source.id && progress?.highestEpisode === event.episode) {

@@ -13,6 +13,8 @@ test('synthetic catalog has no real scores, provider mappings, reviews or playba
  for(const snapshot of json('data/source-snapshots.json').snapshots){const payload=JSON.parse(snapshot.payload);assert.equal(payload.synthetic,true);for(const row of Array.isArray(payload.items)?payload.items:[]){assert(row.bgm>=900000001&&row.bgm<=900000006);assert.match(row.name,/^示例/);assert.deepEqual(row.rating,{});assert.equal(row.image,'/demo-poster.svg');assert.equal(row.mal,undefined)}}
  for(const file of ['reviews','playback','watch-listings'])assert.deepEqual(json('data/'+file+'.json').items,{});
  assert.equal(json('data/watch-sources.json').sources.length,0);
+ assert.deepEqual(json('data/watch-part-scopes.json'),{});
+ const curated=json('data/curated-platforms.json');assert.deepEqual(curated.items,{});assert.deepEqual(curated.links,[]);
 });
 test('authentication is unconditionally unavailable and identity headers cannot select an account',async()=>{
  const auth=load('app/chatgpt-auth.ts');assert.equal(await auth.getChatGPTUser(),null);await assert.rejects(auth.requireChatGPTUser('/'),/unavailable/);
@@ -27,6 +29,7 @@ test('snapshot persistence and AI routes remain disabled even with runtime secre
  for(const path of ['app/api/recommend/route.ts','app/api/personal-recommendations/route.ts']){const route=load(path);for(const method of ['GET','POST']){const response=await route[method](new Request('http://localhost/api/recommend',{method,headers:forged}));assert.equal(response.status,503);assert.equal((await response.json()).configured,false)}}
 });
 test('poster resolution never emits third-party network requests',()=>{const {posterSources}=load('lib/poster-image.ts');for(const image of ['',undefined,'https://example.com/foreign.jpg','javascript:alert(1)'])assert.deepEqual(posterSources(image,900000001),['/demo-poster.svg'])});
+test('curated review status remains empty and does not enable automatic updates in the demo',async()=>{const status=await(await load('app/api/update-status/route.ts').GET()).json();assert.equal(status.demo,true);assert.equal(status.method,'synthetic_fixtures');assert.deepEqual(status.jobs,[]);assert.equal(status.cadence,null);assert.equal(status.curatedPlatforms.automaticFetch,false);assert.equal(status.curatedPlatforms.dueCount,0);assert.deepEqual(status.curatedPlatforms.entries,[])});
 test('production host identity and generated art are absent from executable app files',()=>{
  const files=['app/chatgpt-auth.ts','vite.config.ts','build/worker.ts','components/site-footer.tsx','lib/site-brand.ts'];
  for(const file of files){const text=readFileSync(new URL(file,root),'utf8');assert.doesNotMatch(text,/hubeiqiao|joe-hu|anime-compass|\.openai\/hosting|mockAuth|oai-authenticated-user-email/)}
