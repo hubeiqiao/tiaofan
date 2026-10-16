@@ -22,3 +22,9 @@ The same resolver serves metadata responses and current and historical detail do
 ## Verification
 
 Run the repository's documented source checks after changes: source hygiene, TypeScript, the full automated suite, production build and local HTTP smoke tests. A successful source-demo check does not verify any third-party playback or real-world availability.
+
+### Source compatibility regressions
+
+The synthetic compatibility suites exercise inclusive part boundaries, immutable last-good projection, one-time progress migration, legacy responses without optional part fields, and failed identities without an earlier successful observation. Three-locale rendering checks preserve provider labels, links and observation dates alongside translated part-local counts.
+
+Metadata and directory-route tests verify that optional part fields and dated advancements survive public source-layer serialization. Informational metadata and the read-only review queue retain evidence dates without asserting playback, regional access or entitlement. These tests use the existing fictional fixtures; they do not import a gateway response-policy module or claim generic field sanitization for a separate gateway.

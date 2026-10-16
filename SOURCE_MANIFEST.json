@@ -2,8 +2,8 @@
   "scope": "Explicit source-only export, excluding this self-describing manifest",
   "upstreamSourceCommit": "c4f48512dff570a6981ccd569c52565bb5d39ed2",
   "sourceEdition": "Synthetic standalone demo, authentication and private services disabled",
-  "fileCount": 408,
-  "totalBytes": 2710152,
+  "fileCount": 410,
+  "totalBytes": 2725853,
   "files": [
     {
       "path": ".env.example",
@@ -1072,8 +1072,8 @@
     },
     {
       "path": "docs/RELEASE_REVIEW.md",
-      "bytes": 7177,
-      "sha256": "712be72dd9227bb0b951e9e5cdd32475a7e60dc3b99f3804c62670a10fc54628"
+      "bytes": 8334,
+      "sha256": "f74f8e3b74faa3e4a41c362b1fec49adac976523c3c7f4aac73817898b74d724"
     },
     {
       "path": "docs/REPOSITORY_SETUP.md",
@@ -1112,8 +1112,8 @@
     },
     {
       "path": "docs/exact-resource-matches.md",
-      "bytes": 2641,
-      "sha256": "193c6577c1f5d9e8fccbcc9bbd2729dd10d99afafe7bb3267f11e52829c36336"
+      "bytes": 3480,
+      "sha256": "3b9ae32a16aef6d869a07cc4164fa51f87b4ef8d11372f08cdd1ff822263d2f3"
     },
     {
       "path": "docs/screenshots/README.md",
@@ -1961,6 +1961,11 @@
       "sha256": "6ff9b8a4ee8a0df7766819654da662efe57ec55766fbc5e271f74df6be5de797"
     },
     {
+      "path": "tests/mainland-part-compat.test.mjs",
+      "bytes": 7779,
+      "sha256": "91ffe51f44ca938c2a895b2a21813ed317b7934cf8f26d4d289037ad8a8fb45a"
+    },
+    {
       "path": "tests/public-airing-conflicts.test.mjs",
       "bytes": 896,
       "sha256": "8e2be7e018c862a64d24ce4308150d6aba819bd497ae3841e2b657ce3ce81139"
@@ -2011,6 +2016,11 @@
       "sha256": "d2b233453ac50315ddf77f3ee9a5f72cc6e6c30e6f6446d5eed1fe8b50931af3"
     },
     {
+      "path": "tests/source-scope-compat.test.mjs",
+      "bytes": 5926,
+      "sha256": "11f9272c53d88a3e4c03657959217c8744bf610be63d345f76750812e378899b"
+    },
+    {
       "path": "tests/spotlight-presentation.test.mjs",
       "bytes": 4810,
       "sha256": "2c7e4058d942a6d56db0704afc6676c0e9c513c85d8d2dac74f5f6105385e917"
@@ -2056,5 +2066,15 @@
     "pendingPatchInventorySha256": "c103ff0e30b984e2eb4e2b582bc306d65d0dfd79fb9ade285dcd87196f680480",
     "pendingPatchInventoryFileCount": 21,
     "pendingPatchInventoryFormat": "SHA-256 of the verified canonical review files array encoded using json.dumps(files, separators=(',', ':'), sort_keys=True)."
+  },
+  "compatibilityTestFollowup": {
+    "publicBaseCommit": "aedf6e044939401556e9c8717f80799f4f2fca8f",
+    "date": "2026-10-16",
+    "scope": "Test-only public source compatibility regressions with fictional injected fixtures; documentation and source inventory updated.",
+    "state": "reviewed-test-only",
+    "runtimeCodeUnchanged": true,
+    "syntheticDataPreserved": true,
+    "privateServicesDisabled": true,
+    "gatewayPolicyIncluded": false
   }
 }
